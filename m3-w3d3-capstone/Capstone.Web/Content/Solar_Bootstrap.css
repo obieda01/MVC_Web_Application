@@ -297,6 +297,7 @@ th {
 
     .navbar {
         display: none;
+        background-image:url("~/Content/logo.png")
     }
 
     .btn > .caret,

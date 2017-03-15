@@ -10,17 +10,22 @@
 
     @foreach (Park park in Model)
     {
-        <div style="width:200px; height:200px;">
-            @{string imagePath = @"~/Content/Assets/" + park.ParkCode.ToLower() + ".jpg";}
-            <img src="@imagePath" />
+        <div class="row">
+            <div class="col-md-4">
+                @{string imagePath = park.ParkCode.ToLower() + ".jpg";}
+
+                <img src="~/Content/Assets/@imagePath" alt="park image" />
+
+            </div>
+            <div class="col-md-8">
+                <strong>@park.ParkName </strong><br />
+                @park.State <br />
+                @park.ParkDescription
+            </div>
+           
         </div>
-        <div>
-            @park.ParkName <br />
-            @park.State <br />
-            @park.ParkDescription 
-        </div>
-        <hr /><br /> 
-    }
+        <hr />
+     }
 </section>
 
 

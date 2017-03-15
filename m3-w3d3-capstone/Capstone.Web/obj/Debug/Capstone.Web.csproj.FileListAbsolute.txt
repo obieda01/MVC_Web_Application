@@ -77,3 +77,4 @@ C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Cap
 C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Mvc.xml
 C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\obj\Debug\Capstone.Web.dll
 C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\obj\Debug\Capstone.Web.pdb
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\obj\Debug\Capstone.Web.csprojResolveAssemblyReference.cache
