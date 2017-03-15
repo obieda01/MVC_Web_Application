@@ -11,6 +11,8 @@ namespace Capstone.Web.DAL
     {
         private string connectionString = @"Data Source=DESKTOP-58F8CH1\SQLEXPRESS;Initial Catalog=ParkDB;Integrated Security=True";
         private const string getAllParkSqlCommand = "SELECT * FROM park";
+        private const string getParkIdSqlCommand = "SELECT * FROM park WHERE parkCode= @parkCode";
+
 
         public string ConnectionString
         {
@@ -54,7 +56,45 @@ namespace Capstone.Web.DAL
 
                 throw;
             }
+        }
 
+
+
+        public Park getParkIdData(string parkCode)
+        {
+            Park currentPark = new Park();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConnectionString))
+                {
+                   
+                    conn.Open();
+                    SqlCommand command = new SqlCommand(getParkIdSqlCommand, conn);
+                    command.Parameters.AddWithValue("@parkCode", "'" + parkCode + "'");
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        currentPark.Acreage = Convert.ToInt32(reader["acreage"]);
+                        currentPark.AnnualVisitorCount = Convert.ToInt32(reader["annualVisitorCount"]);
+                        currentPark.Climate = Convert.ToString(reader["climate"]);
+                        currentPark.ElevationInFeet = Convert.ToInt32(reader["elevationInFeet"]);
+                        currentPark.InspirationalQuoteSource = Convert.ToString(reader["inspirationalQuoteSource"]);
+                        currentPark.MilesOfTrail = Convert.ToUInt32(reader["milesOfTrail"]);
+                        currentPark.NumberOfAnimalSpecies = Convert.ToInt32(reader["numberOfAnimalSpecies"]);
+                        currentPark.NumberOfCampsites = Convert.ToInt32(reader["numberOfCampsites"]);
+                        currentPark.ParkCode = Convert.ToString(reader["parkCode"]);
+                        currentPark.ParkName = Convert.ToString(reader["parkName"]);
+                        currentPark.State = Convert.ToString(reader["state"]);
+                        currentPark.YearFounded = Convert.ToInt32(reader["yearFounded"]);
+                    }
+                }
+                return currentPark;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
     }
