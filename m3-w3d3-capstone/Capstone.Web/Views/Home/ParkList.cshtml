@@ -2,6 +2,25 @@
 @{
     ViewBag.Title = "ParkList";
 }
+@using Capstone.Web.Models;
+@model List<Park>
+<section class="container">
+    <h2>ParkList</h2>
+    @*a. The home page should only show a picture of the park, its name, location, and a short summary,*@  
 
-<h2>ParkList</h2>
+    @foreach (Park park in Model)
+    {
+        <div style="width:200px; height:200px;">
+            @{string imagePath = @"~/Content/Assets/" + park.ParkCode.ToLower() + ".jpg";}
+            <img src="@imagePath" />
+        </div>
+        <div>
+            @park.ParkName <br />
+            @park.State <br />
+            @park.ParkDescription 
+        </div>
+        <hr /><br /> 
+    }
+</section>
+
 

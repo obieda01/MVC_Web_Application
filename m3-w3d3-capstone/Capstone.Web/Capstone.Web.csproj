@@ -105,6 +105,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Assets\cvnp.jpg" />
+    <Content Include="Content\Assets\enp.jpg" />
+    <Content Include="Content\Assets\gcnp.jpg" />
+    <Content Include="Content\Assets\gnp.jpg" />
+    <Content Include="Content\Assets\gsmnp.jpg" />
+    <Content Include="Content\Assets\gtnp.jpg" />
+    <Content Include="Content\Assets\mrnp.jpg" />
+    <Content Include="Content\Assets\rmnp.jpg" />
+    <Content Include="Content\Assets\ynp.jpg" />
+    <Content Include="Content\Assets\ynp2.jpg" />
+    <Content Include="Content\logo.png" />
     <Content Include="Content\Solar_Bootstrap.css" />
     <Content Include="Content\style.css" />
     <Content Include="Global.asax" />
