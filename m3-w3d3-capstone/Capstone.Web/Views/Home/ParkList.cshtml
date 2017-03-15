@@ -6,21 +6,21 @@
 @model List<Park>
 <section class="container">
     <h2>ParkList</h2>
-    @*a. The home page should only show a picture of the park, its name, location, and a short summary,*@  
+    @*a. The home page should only show a picture of the park, its name, location, and a short summary,*@
 
-    @foreach (Park park in Model)
+    @foreach (var park in Model)
     {
-        <div style="width:200px; height:200px;">
-            @{string imagePath = @"~/Content/Assets/" + park.ParkCode.ToLower() + ".jpg";}
-            <img src="@imagePath" />
+        <div class="">
+            <div style="width: 200px; height: 200px;">
+                @{ string s = park.ParkCode.ToLower() + ".jpg";}
+                <img src="~/Content/Assets/@s" />
+            </div>
+            <div>
+                @park.ParkName <br />
+                @park.State <br />
+                @park.ParkDescription
+            </div>
+            <hr />
         </div>
-        <div>
-            @park.ParkName <br />
-            @park.State <br />
-            @park.ParkDescription 
-        </div>
-        <hr /><br /> 
-    }
+                    }
 </section>
-
-

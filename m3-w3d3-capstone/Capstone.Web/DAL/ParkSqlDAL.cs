@@ -9,7 +9,9 @@ namespace Capstone.Web.DAL
 {
     public class ParkSqlDAL : IParkDAL
     {
-        private string connectionString = @"Data Source=DESKTOP-58F8CH1\SQLEXPRESS;Initial Catalog=ParkDB;Integrated Security=True";
+        // private string connectionString = @"Data Source=DESKTOP-58F8CH1\SQLEXPRESS;Initial Catalog=ParkDB;Integrated Security=True";
+        private string connectionString = @"Data Source=DESKTOP-U3MOBAH\SS;Initial Catalog=ParkDB;Integrated Security=True";
+
         private const string getAllParkSqlCommand = "SELECT * FROM park";
         private const string getParkIdSqlCommand = "SELECT * FROM park WHERE parkCode= @parkCode";
 
@@ -27,16 +29,16 @@ namespace Capstone.Web.DAL
             {
                 using (SqlConnection conn = new SqlConnection(ConnectionString))
                 {
-                    Park currentPark = new Park();
                     conn.Open();
                     SqlCommand command = new SqlCommand(getAllParkSqlCommand, conn);
                     SqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
                     {
+                        Park currentPark = new Park();
                         currentPark.Acreage = Convert.ToInt32(reader["acreage"]);
                         currentPark.AnnualVisitorCount = Convert.ToInt32(reader["annualVisitorCount"]);
-                        currentPark.Climate= Convert.ToString(reader["climate"]);
-                        currentPark.ElevationInFeet=Convert.ToInt32(reader["elevationInFeet"]);
+                        currentPark.Climate = Convert.ToString(reader["climate"]);
+                        currentPark.ElevationInFeet = Convert.ToInt32(reader["elevationInFeet"]);
                         currentPark.InspirationalQuoteSource = Convert.ToString(reader["inspirationalQuoteSource"]);
                         currentPark.MilesOfTrail = Convert.ToUInt32(reader["milesOfTrail"]);
                         currentPark.NumberOfAnimalSpecies = Convert.ToInt32(reader["numberOfAnimalSpecies"]);
@@ -67,7 +69,7 @@ namespace Capstone.Web.DAL
             {
                 using (SqlConnection conn = new SqlConnection(ConnectionString))
                 {
-                   
+
                     conn.Open();
                     SqlCommand command = new SqlCommand(getParkIdSqlCommand, conn);
                     command.Parameters.AddWithValue("@parkCode", "'" + parkCode + "'");
