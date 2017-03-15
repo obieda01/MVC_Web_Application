@@ -1,2 +1,11 @@
-﻿body {
+﻿img{
+    width:240px;
+    height: 210px;
+    padding: 5px;
+    margin:5px;
 }
+
+ .navbar {
+        display: none;
+        background-image:url("~/Content/logo.png")
+    }

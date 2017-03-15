@@ -29,6 +29,10 @@ namespace Capstone.Web.DAL
             {
                 using (SqlConnection conn = new SqlConnection(ConnectionString))
                 {
+<<<<<<< HEAD
+=======
+                   
+>>>>>>> 3f861754d19c843dc84d6e83559b977aa9dcf3b2
                     conn.Open();
                     SqlCommand command = new SqlCommand(getAllParkSqlCommand, conn);
                     SqlDataReader reader = command.ExecuteReader();
@@ -45,6 +49,7 @@ namespace Capstone.Web.DAL
                         currentPark.NumberOfCampsites = Convert.ToInt32(reader["numberOfCampsites"]);
                         currentPark.ParkCode = Convert.ToString(reader["parkCode"]);
                         currentPark.ParkName = Convert.ToString(reader["parkName"]);
+                        currentPark.ParkDescription = Convert.ToString(reader["parkDescription"]);
                         currentPark.State = Convert.ToString(reader["state"]);
                         currentPark.YearFounded = Convert.ToInt32(reader["yearFounded"]);
 
