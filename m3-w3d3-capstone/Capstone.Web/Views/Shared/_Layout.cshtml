@@ -1,42 +1,43 @@
-﻿@{
-    Layout = null;
-}
-
-<!DOCTYPE html>
-
+﻿<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title></title>
-    <link href="~/Content/Solar_Bootstrap.css" rel="stylesheet" />
+    <title>ASP.NET MVC - Controllers Day 2 (HTTP POST)</title>
+    <link rel="stylesheet" href="~/Content/Solar_Bootstrap.css" />
+    <link rel="stylesheet" href="~/Content/style.css" />
 </head>
 <body>
-    <div>
-        <table class="table table-striped table-hover ">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Column heading</th>
-                    <th>Column heading</th>
-                    <th>Column heading</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                    <td>Column content</td>
-                </tr>
-            </tbody>
-        </table> 
-    </div>
-    <div>@RenderBody()</div>
+    <section class="container">
+        <div>
+            <div class="navbar navbar-inverse navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <h1>National Park Weather Service </h1>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li><a href="@Url.Action("Index", "Home")">See all Parks</a></li>
+                            <li><a href="@Url.Action("Surveys", "Home")">Survey</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="container-fluid">
+                @RenderBody()
+                <hr />
+            </div>
+            <div>
+                <footer>
+                    <p>&copy; 2017 - @DateTime.Now.Year - National Park Weather Service Application</p>
+                    <div>
+                        @RenderSection("AfterCopyright", false)
+                    </div>
+                </footer>
+            </div>
+        </div>
+     </section>
+
 </body>
 </html>
