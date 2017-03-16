@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-
+using Capstone.Web.DAL;
 namespace Capstone.Web.Models
 {
     public class Survey
@@ -23,5 +23,12 @@ namespace Capstone.Web.Models
 
         //activityLevel varchar(100) not null,
         public string ActivityLevel { get; set; }
+
+        private ISurveyDAL surveyDAL;
+        public List<Survey> getAllSurveySql()
+        {
+            surveyDAL = new SurveySqlDAL();
+            return surveyDAL.getAllSurvey();
+        }
     }
 }

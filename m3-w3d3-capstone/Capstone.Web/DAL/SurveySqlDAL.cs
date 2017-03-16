@@ -8,7 +8,7 @@ using Capstone.Web.Models;
 
 namespace Capstone.Web.DAL
 {
-    public class SurveySqlDAL //: ISurveyDAL
+    public class SurveySqlDAL : ISurveyDAL
     {
         //private string connectionString = @"Data Source=DESKTOP-58F8CH1\SQLEXPRESS;Initial Catalog=ParkDB;Integrated Security=True";
         private string connectionString = @"Data Source=DESKTOP-U3MOBAH\SS;Initial Catalog=ParkDB;Integrated Security=True";
