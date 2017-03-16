@@ -9,8 +9,8 @@ namespace Capstone.Web.DAL
 {
     public class ParkSqlDAL : IParkDAL
     {
-        // private string connectionString = @"Data Source=DESKTOP-58F8CH1\SQLEXPRESS;Initial Catalog=ParkDB;Integrated Security=True";
-        private string connectionString = @"Data Source=DESKTOP-U3MOBAH\SS;Initial Catalog=ParkDB;Integrated Security=True";
+        private string connectionString = @"Data Source=DESKTOP-58F8CH1\SQLEXPRESS;Initial Catalog=ParkDB;Integrated Security=True";
+        //private string connectionString = @"Data Source=DESKTOP-U3MOBAH\SS;Initial Catalog=ParkDB;Integrated Security=True";
 
         private const string getAllParkSqlCommand = "SELECT * FROM park";
         private const string getParkIdSqlCommand = "SELECT * FROM park WHERE parkCode= @parkCode";
@@ -29,10 +29,7 @@ namespace Capstone.Web.DAL
             {
                 using (SqlConnection conn = new SqlConnection(ConnectionString))
                 {
-<<<<<<< HEAD
-=======
-                   
->>>>>>> 3f861754d19c843dc84d6e83559b977aa9dcf3b2
+
                     conn.Open();
                     SqlCommand command = new SqlCommand(getAllParkSqlCommand, conn);
                     SqlDataReader reader = command.ExecuteReader();
@@ -44,6 +41,7 @@ namespace Capstone.Web.DAL
                         currentPark.Climate = Convert.ToString(reader["climate"]);
                         currentPark.ElevationInFeet = Convert.ToInt32(reader["elevationInFeet"]);
                         currentPark.InspirationalQuoteSource = Convert.ToString(reader["inspirationalQuoteSource"]);
+                        currentPark.InspirationalQuote = Convert.ToString(reader["inspirationalQuote"]);
                         currentPark.MilesOfTrail = Convert.ToUInt32(reader["milesOfTrail"]);
                         currentPark.NumberOfAnimalSpecies = Convert.ToInt32(reader["numberOfAnimalSpecies"]);
                         currentPark.NumberOfCampsites = Convert.ToInt32(reader["numberOfCampsites"]);

@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Weather";
+}
+@using Capstone.Web.Models;
+@model List<Weather>
+    <div>
+        <h2>5 Day Weather Forecaset</h2>
+    <table>
+        <thead>
+            
+        </thead>
+        <tr>
+            <th>Day 1</th>
+            <th>Day 2</th>
+            <th>Day 3</th>
+            <th>Day 4</th>
+            <th>Day 5</th>
+        </tr>
+        <tr>
+            @foreach (Weather item in Model)
+            {
+
+                <td>
+                    @if(item.Forecast == "cloudy")
+                    {
+                        <img src="~/Content/Assets/cloudy.png" />
+                    }
+                    else if (item.Forecast == "partly cloudy")
+                    {
+                        <img src="~/Content/Assets/partlyCloudy.png" />
+                    }
+                    else if (item.Forecast == "sunny")
+                    {
+                        <img src="~/Content/Assets/sunny.png" />
+                    }
+                    else if (item.Forecast == "snow")
+                    {
+                        <img src="~/Content/Assets/snow.png" />
+                    }
+                    else if (item.Forecast == "rain")
+                    {
+                        <img src="~/Content/Assets/rain.png" />
+                    }
+                    else if (item.Forecast == "thunderstorms")
+                    {
+                        <img src="~/Content/Assets/thunderstorms.png" />
+                    }
+                    <br />
+                    High @item.High F <br />
+                    Low @item.Low F <br />
+                    @item.Forecast<br />
+                </td>
+
+            }
+        </tr>
+    </table>
+</div>
+

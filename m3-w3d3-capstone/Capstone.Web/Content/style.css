@@ -1,11 +1,50 @@
 ﻿img{
-    width:240px;
-    height: 210px;
-    padding: 5px;
-    margin:5px;
+    width:400px;
+    height: 350px;
+    margin-right:5px;
+    border-radius:5px;
 }
 
- .navbar {
-        display: none;
-        background-image:url("~/Content/logo.png")
+.header-site{
+      vertical-align:bottom;
+      background-color:black;
+      width:100%;
     }
+.header-site img {
+    width:250px;
+    height:150px;
+    margin-bottom:2px;
+}
+.header-site h2{
+    margin-top:0px;
+    padding-top:0px;
+    color:#663300;
+
+}
+ .jumbotron{
+     width:85%;
+     margin-top:0px;
+     margin-left: 80px;
+     margin-right:2px;
+     background-color:azure;
+     /*color:#ff6a00;*/
+     /*color:azure;*/
+     color:#3366FF;
+
+ }
+ .park-detail-img{
+    width: 250px;
+    height: 200px;
+    
+ }
+ .container {
+      background-color:black;
+      width:100%;
+ }
+ q {
+    quotes: "\00ab" "\00bb" "\2039" "\203A";
+}
+ table td img {
+     width:150px;
+     height:110px;
+ }

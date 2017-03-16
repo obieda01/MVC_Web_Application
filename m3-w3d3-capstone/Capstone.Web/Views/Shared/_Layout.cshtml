@@ -1,44 +1,37 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-    <meta name="viewport" content="width=device-width" />
-    <title>ASP.NET MVC - Controllers Day 2 (HTTP POST)</title>
-    <link rel="stylesheet" href="~/Content/Solar_Bootstrap.css" />
-    <link rel="stylesheet" href="~/Content/style.css" />
-</head>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>Capstone - National Park Service</title>
+        <link rel="stylesheet" href="~/Content/Solar_Bootstrap.css" />
+        <link rel="stylesheet" href="~/Content/style.css" />
+    </head>
 <body>
-    <section>
-        <div>
-            <div class="navbar navbar-fixed-top">
-                <div>
-                    <div class="navbar">
-                       
-                        <h1 style="text-align:center">National Park Weather Service </h1>
-                    </div>
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav" style="float:right">
-                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                            <li><a href="@Url.Action("Index", "Home")">See all Parks</a></li>
-                            <li><a href="@Url.Action("Surveys", "Home")">Survey</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <br />
-            <div class="container-fluid">
-                @RenderBody()
-                <hr />
-            </div>
+    <div class="container">
+        <div class="header-site">
             <div>
-                <footer>
-                    <p>&copy; 2017 - @DateTime.Now.Year - National Park Weather Service Application</p>
-                    <div>
-                        @RenderSection("AfterCopyright", false)
-                    </div>
-                </footer>
+                <img src="~/Content/logo.png" style="float:left;" />
+                @*<h2 style="text-align:center">National Park Weather Service</h2>*@
+            </div>
+            <div class="navbar-collapse collapse">
+                 <ul class="nav navbar-nav" style="float:right;">
+                     <li>@Html.ActionLink("National Parks", "ParkList", "Home")</li>
+                     <li><a href="@Url.Action("Index", "Home")">See all Parks</a></li>
+                     <li><a href="@Url.Action("Surveys", "Home")">Survey</a></li>
+                 </ul>
             </div>
         </div>
-     </section>
-
+        <div class="jumbotron">
+            @RenderBody()
+            <br />
+        </div>
+            <footer>
+                <p style="text-align:center;">&copy; 2017 - @DateTime.Now.Year - National Park Weather Service Application</p>
+                <div>
+                    @RenderSection("AfterCopyright", false)
+                </div>
+            </footer>
+        </div>
+        </>
 </body>
 </html>

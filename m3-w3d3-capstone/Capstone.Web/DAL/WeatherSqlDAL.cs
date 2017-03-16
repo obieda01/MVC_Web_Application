@@ -9,8 +9,8 @@ namespace Capstone.Web.DAL
 {
     public class WeatherSqlDAL : IWeatherDAL
     {
-        // private string connectionString = @"Data Source=DESKTOP-58F8CH1\SQLEXPRESS;Initial Catalog=ParkDB;Integrated Security=True";
-        private string connectionString = @"Data Source=DESKTOP-U3MOBAH\SS;Initial Catalog=ParkDB;Integrated Security=True";
+        private string connectionString = @"Data Source=DESKTOP-58F8CH1\SQLEXPRESS;Initial Catalog=ParkDB;Integrated Security=True";
+        //private string connectionString = @"Data Source=DESKTOP-U3MOBAH\SS;Initial Catalog=ParkDB;Integrated Security=True";
 
         private const string getWeatherByParkCodeSqlCommand = @"SELECT * FROM weather WHERE parkCode=@parkCode";
 
@@ -29,7 +29,7 @@ namespace Capstone.Web.DAL
                 {
                     conn.Open();
                     SqlCommand command = new SqlCommand(getWeatherByParkCodeSqlCommand, conn);
-                    command.Parameters.AddWithValue("@parkCode", "'" + parkCode + "'");
+                    command.Parameters.AddWithValue("@parkCode", parkCode);
                     SqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
                     {
