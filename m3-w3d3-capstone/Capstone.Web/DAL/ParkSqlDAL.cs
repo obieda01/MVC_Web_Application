@@ -29,10 +29,7 @@ namespace Capstone.Web.DAL
             {
                 using (SqlConnection conn = new SqlConnection(ConnectionString))
                 {
-<<<<<<< HEAD
-=======
-                   
->>>>>>> 3f861754d19c843dc84d6e83559b977aa9dcf3b2
+
                     conn.Open();
                     SqlCommand command = new SqlCommand(getAllParkSqlCommand, conn);
                     SqlDataReader reader = command.ExecuteReader();

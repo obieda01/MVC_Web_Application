@@ -21,5 +21,6 @@ namespace Capstone.Web.Controllers
             List<Park> model = DAL.getAllParksData();
             return View("ParkList", model);
         }
+        
     }
 }
