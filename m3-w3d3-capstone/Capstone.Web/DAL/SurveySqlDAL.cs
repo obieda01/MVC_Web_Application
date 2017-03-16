@@ -23,53 +23,6 @@ namespace Capstone.Web.DAL
 
         public static string AddNewSurveySqlCommand => addNewSurveySqlCommand;
 
-<<<<<<< HEAD
-    //    public List<Survey> getAllSurvey()
-    //    {
-    //        List<Survey> allParks = new List<Survey>();
-    //        try
-    //        {
-    //            using (SqlConnection conn = new SqlConnection(ConnectionString))
-
-
-    //                Survey currentSurvey = new Survey();
-
-    //            //currentSurvey.AnnualVisitorCount = Convert.ToInt32(reader["annualVisitorCount"]);
-    //            //currentSurvey.Climate = Convert.ToString(reader["climate"]);
-    //            //currentSurvey.ElevationInFeet = Convert.ToInt32(reader["elevationInFeet"]);
-    //            //currentSurvey.InspirationalQuoteSource = Convert.ToString(reader["inspirationalQuoteSource"]);
-    //            //currentSurvey.MilesOfTrail = Convert.ToUInt32(reader["milesOfTrail"]);
-    //            //currentSurvey.NumberOfAnimalSpecies = Convert.ToInt32(reader["numberOfAnimalSpecies"]);
-    //            //currentSurvey.NumberOfCampsites = Convert.ToInt32(reader["numberOfCampsites"]);
-    //            //currentSurvey.ParkCode = Convert.ToString(reader["parkCode"]);
-    //            //currentSurvey.ParkName = Convert.ToString(reader["parkName"]);
-    //            //currentSurvey.State = Convert.ToString(reader["state"]);
-    //            //currentSurvey.YearFounded = Convert.ToInt32(reader["yearFounded"]);
-
-    //            allParks.Add(currentSurvey);
-    //        }
-    //            }
-    //            return allParks;
-    //        }
-    //        catch (Exception)
-    //        {
-
-    //            throw;
-    //        }
-    //        return new List<Survey>();
-    //    }       {
-    //                    conn.Open();
-    //                    SqlCommand command = new SqlCommand(getAllSurveySqlCommand, conn);
-    //                    SqlDataReader reader = command.ExecuteReader();
-    //                    while (reader.Read())
-    //                    {
-
-
-
-    //        public void addNewSurvey(Survey newSurvey) { }
-       }
-   }
-=======
         public List<Survey> getAllSurvey()
         {
             List<Survey> allSurveys = new List<Survey>();
@@ -124,4 +77,4 @@ namespace Capstone.Web.DAL
         }
     }
 }
->>>>>>> 9b71d011cc46925474e2583e762f0df867122408
+

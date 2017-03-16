@@ -1,43 +1,3 @@
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\csc.exe
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\Microsoft.CSharp.Core.targets
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\System.Collections.Immutable.dll
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\System.Reflection.Metadata.dll
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\vbc.exe
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\VBCSCompiler.exe
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\VBCSCompiler.exe.config
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Capstone.Web.dll.config
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Capstone.Web.dll
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Capstone.Web.pdb
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Ninject.dll
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Ninject.Web.Common.dll
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Ninject.Web.Mvc.dll
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Helpers.dll
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Mvc.dll
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Razor.dll
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Webpages.Deployment.dll
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Webpages.dll
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Webpages.Razor.dll
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\WebActivatorEx.dll
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Ninject.xml
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Ninject.Web.Common.xml
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Ninject.Web.Mvc.xml
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Razor.xml
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Webpages.xml
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Webpages.Deployment.xml
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Webpages.Razor.xml
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Helpers.xml
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Mvc.xml
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\obj\Debug\Capstone.Web.dll
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\obj\Debug\Capstone.Web.pdb
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\obj\Debug\Capstone.Web.csprojResolveAssemblyReference.cache
 C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\csc.exe
 C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -78,3 +38,42 @@ C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercis
 C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\obj\Debug\Capstone.Web.csprojResolveAssemblyReference.cache
 C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\obj\Debug\Capstone.Web.dll
 C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\obj\Debug\Capstone.Web.pdb
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\csc.exe
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\vbc.exe
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\VBCSCompiler.exe
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Capstone.Web.dll.config
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Capstone.Web.dll
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Capstone.Web.pdb
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Ninject.dll
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Ninject.Web.Common.dll
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Ninject.Web.Mvc.dll
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Helpers.dll
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Mvc.dll
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Razor.dll
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Webpages.Deployment.dll
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Webpages.dll
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Webpages.Razor.dll
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\WebActivatorEx.dll
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Ninject.xml
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Ninject.Web.Common.xml
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\Ninject.Web.Mvc.xml
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Razor.xml
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Webpages.xml
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Webpages.Deployment.xml
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Webpages.Razor.xml
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Helpers.xml
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\bin\System.Web.Mvc.xml
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\obj\Debug\Capstone.Web.dll
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web\obj\Debug\Capstone.Web.pdb

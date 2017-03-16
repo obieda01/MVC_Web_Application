@@ -1,17 +1,17 @@
-﻿
+﻿@using Capstone.Web.Models;
+
+@model List<Park>
+
 @{
     ViewBag.Title = "ParkList";
 }
-@using Capstone.Web.Models;
-@model List<Park>
-
     @*a. The home page should only show a picture of the park, its name, location, and a short summary,*@
 
     @foreach (var park in Model)
     {
-<<<<<<< HEAD
       <div style="min-height:450px;">
           <h2 style="text-align:center"> @park.ParkName </h2>
+
           <div style="float:left;">
               @{string imagePath = park.ParkCode.ToLower() + ".jpg";}
               @*<img src="~/Content/Assets/@imagePath" alt="park image" style="float:left;"/>*@
@@ -21,45 +21,11 @@
               </a>
               <h3 style="text-align:center;">@park.State</h3>
           </div>
+
           <div style="display:inline-block; width:450px;margin-left:30px;vertical-align:top;"> <br />
               <p>@park.ParkDescription</p>
           </div>        
       </div>
     <hr />
-=======
-
-        <div class="">
-            <div style="width: 200px; height: 200px;">
-                @{ string s = park.ParkCode.ToLower() + ".jpg";}
-                <img src="~/Content/Assets/@s" />
-            </div>
-            <div>
-                @park.ParkName <br />
-                @park.State <br />
-                @park.ParkDescription
-            </div>
-            <hr />
-        </div>
                     
-        <div class="row">
-            <div class="col-md-4">
-                @{string imagePath = park.ParkCode.ToLower() + ".jpg";}
->>>>>>> 9b71d011cc46925474e2583e762f0df867122408
-
-   }
-
-<<<<<<< HEAD
-=======
-            </div>
-            <div class="col-md-8">
-                <strong>@park.ParkName </strong><br />
-                @park.State <br />
-                @park.ParkDescription
-            </div>
-           
-        </div>
-        <hr />
      }
-
-</section>
->>>>>>> 9b71d011cc46925474e2583e762f0df867122408

@@ -59,7 +59,7 @@ namespace Capstone.Web.Tests.DAL
         public void SurveySqlDAL_GetAllSurvey_Tests()
         {
             //Arrange
-            ISurveyDAL surveyDAL = new SurveySqlDAL();
+            SurveySqlDAL surveyDAL = new SurveySqlDAL();
 
             //Act
             List<Survey> allSurveies = surveyDAL.getAllSurvey();
@@ -74,7 +74,7 @@ namespace Capstone.Web.Tests.DAL
         public void SurveySqlDAL_AddNewSurvey_Tests()
         {
             //Arrange
-            ISurveyDAL surveyDAL = new SurveySqlDAL();
+            SurveySqlDAL surveyDAL = new SurveySqlDAL();
             //Survey newSurvey = new Survey();
             //newSurvey.ActivityLevel = "test";
             //newSurvey.EmailAddress = "test";

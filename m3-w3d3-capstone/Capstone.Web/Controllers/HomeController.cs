@@ -21,7 +21,6 @@ namespace Capstone.Web.Controllers
             List<Park> model = DAL.getAllParksData();
             return View("ParkList", model);
         }
-<<<<<<< HEAD
         public ActionResult ParkDetails(string id)
         {
             IParkDAL DAL = new ParkSqlDAL();
@@ -55,8 +54,6 @@ namespace Capstone.Web.Controllers
             }
             return View("Weather", weather);
         }
-=======
         
->>>>>>> 9b71d011cc46925474e2583e762f0df867122408
     }
 }
