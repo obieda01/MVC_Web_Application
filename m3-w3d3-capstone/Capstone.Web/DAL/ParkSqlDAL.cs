@@ -74,7 +74,8 @@ namespace Capstone.Web.DAL
 
                     conn.Open();
                     SqlCommand command = new SqlCommand(getParkIdSqlCommand, conn);
-                    command.Parameters.AddWithValue("@parkCode", "'" + parkCode + "'");
+                    string sql = @"'" + parkCode + @"'";
+                    command.Parameters.AddWithValue("@parkCode", parkCode);
                     SqlDataReader reader = command.ExecuteReader();
                     while (reader.Read())
                     {
