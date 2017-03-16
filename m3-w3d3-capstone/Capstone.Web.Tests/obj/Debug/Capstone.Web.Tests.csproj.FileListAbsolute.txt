@@ -42,7 +42,6 @@ C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercis
 C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web.Tests\bin\Debug\Ninject.xml
 C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web.Tests\obj\Debug\Capstone.Web.Tests.dll
 C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web.Tests\obj\Debug\Capstone.Web.Tests.pdb
-C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web.Tests\obj\Debug\Capstone.Web.Tests.csprojResolveAssemblyReference.cache
 C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web.Tests\bin\Debug\roslyn\csc.exe
 C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web.Tests\bin\Debug\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web.Tests\bin\Debug\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -83,5 +82,6 @@ C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Cap
 C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web.Tests\bin\Debug\System.Web.WebPages.Razor.xml
 C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web.Tests\bin\Debug\Ninject.Web.Common.xml
 C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web.Tests\bin\Debug\Ninject.xml
+C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web.Tests\obj\Debug\Capstone.Web.Tests.csprojResolveAssemblyReference.cache
 C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web.Tests\obj\Debug\Capstone.Web.Tests.dll
 C:\Users\naden\workspaces\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.Web.Tests\obj\Debug\Capstone.Web.Tests.pdb
