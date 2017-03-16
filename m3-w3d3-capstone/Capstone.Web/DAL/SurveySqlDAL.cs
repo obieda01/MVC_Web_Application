@@ -13,7 +13,7 @@ namespace Capstone.Web.DAL
         //private string connectionString = @"Data Source=DESKTOP-U3MOBAH\SS;Initial Catalog=ParkDB;Integrated Security=True";
 
         private const string getAllSurveySqlCommand = "SELECT* FROM survey_result;";
-        private const string getParkIdSqlCommand = "SELECT * FROM park WHERE parkCode= @parkCode";
+        private const string addNewSurveySqlCommand = @"INSERT INTO survey_result ([parkCode],[emailAddress],[state],[activityLevel]) VALUES(@ParkCode,@EmailAddress,@State,@ActivityLevel)";
 
         public string ConnectionString
         {
@@ -21,8 +21,9 @@ namespace Capstone.Web.DAL
             set { connectionString = value; }
         }
 
+        public static string AddNewSurveySqlCommand => addNewSurveySqlCommand;
 
-
+<<<<<<< HEAD
     //    public List<Survey> getAllSurvey()
     //    {
     //        List<Survey> allParks = new List<Survey>();
@@ -68,3 +69,59 @@ namespace Capstone.Web.DAL
     //        public void addNewSurvey(Survey newSurvey) { }
        }
    }
+=======
+        public List<Survey> getAllSurvey()
+        {
+            List<Survey> allSurveys = new List<Survey>();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConnectionString))
+                {
+                    conn.Open();
+                    SqlCommand command = new SqlCommand(getAllSurveySqlCommand, conn);
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        Survey currentSurvey = new Survey();
+                        currentSurvey.ParkCode = Convert.ToString(reader["parkCode"]);
+                        currentSurvey.ActivityLevel = Convert.ToString(reader["activityLevel"]);
+                        currentSurvey.EmailAddress = Convert.ToString(reader["emailAddress"]);
+                        currentSurvey.State = Convert.ToString(reader["state"]);
+                        currentSurvey.SurveyId = Convert.ToInt32(reader["surveyId"]);
+                        allSurveys.Add(currentSurvey);
+                    }
+                }
+                return allSurveys;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public bool addNewSurvey(Survey newSurvey)
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConnectionString))
+                {
+                    conn.Open();
+                    SqlCommand command = new SqlCommand(AddNewSurveySqlCommand, conn);
+                    command.Parameters.AddWithValue("@ParkCode", newSurvey.ParkCode);
+                    command.Parameters.AddWithValue("@ActivityLevel", newSurvey.ActivityLevel);
+                    command.Parameters.AddWithValue("@EmailAddress", newSurvey.EmailAddress);
+                    command.Parameters.AddWithValue("@State", newSurvey.State);
+                    int rowAffected = command.ExecuteNonQuery();
+
+                    return rowAffected > 0;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+    }
+}
+>>>>>>> 9b71d011cc46925474e2583e762f0df867122408

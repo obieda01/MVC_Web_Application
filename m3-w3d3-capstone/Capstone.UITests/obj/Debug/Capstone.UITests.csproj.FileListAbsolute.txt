@@ -1,0 +1,15 @@
+C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.UITests\bin\Debug\Default.srprofile
+C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.UITests\bin\Debug\Capstone.UITests.dll.config
+C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.UITests\bin\Debug\Capstone.UITests.dll
+C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.UITests\bin\Debug\Capstone.UITests.pdb
+C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.UITests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.UITests\bin\Debug\SpecRun.SpecFlowPlugin.dll
+C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.UITests\bin\Debug\TechTalk.SpecFlow.dll
+C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.UITests\bin\Debug\TechTalk.SpecRun.dll
+C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.UITests\bin\Debug\WebDriver.dll
+C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.UITests\bin\Debug\WebDriver.Support.dll
+C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.UITests\bin\Debug\WebDriver.xml
+C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.UITests\bin\Debug\WebDriver.Support.xml
+C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.UITests\obj\Debug\Capstone.UITests.csprojResolveAssemblyReference.cache
+C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.UITests\obj\Debug\Capstone.UITests.dll
+C:\Users\aobiedat\Tech Elevator\.Net class\week1\week9team2-c-week9-pair-exercises\m3-w3d3-capstone\Capstone.UITests\obj\Debug\Capstone.UITests.pdb

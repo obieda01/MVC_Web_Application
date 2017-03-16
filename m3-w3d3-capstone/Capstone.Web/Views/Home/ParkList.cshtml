@@ -9,6 +9,7 @@
 
     @foreach (var park in Model)
     {
+<<<<<<< HEAD
       <div style="min-height:450px;">
           <h2 style="text-align:center"> @park.ParkName </h2>
           <div style="float:left;">
@@ -25,6 +26,40 @@
           </div>        
       </div>
     <hr />
+=======
+
+        <div class="">
+            <div style="width: 200px; height: 200px;">
+                @{ string s = park.ParkCode.ToLower() + ".jpg";}
+                <img src="~/Content/Assets/@s" />
+            </div>
+            <div>
+                @park.ParkName <br />
+                @park.State <br />
+                @park.ParkDescription
+            </div>
+            <hr />
+        </div>
+                    
+        <div class="row">
+            <div class="col-md-4">
+                @{string imagePath = park.ParkCode.ToLower() + ".jpg";}
+>>>>>>> 9b71d011cc46925474e2583e762f0df867122408
 
    }
 
+<<<<<<< HEAD
+=======
+            </div>
+            <div class="col-md-8">
+                <strong>@park.ParkName </strong><br />
+                @park.State <br />
+                @park.ParkDescription
+            </div>
+           
+        </div>
+        <hr />
+     }
+
+</section>
+>>>>>>> 9b71d011cc46925474e2583e762f0df867122408
