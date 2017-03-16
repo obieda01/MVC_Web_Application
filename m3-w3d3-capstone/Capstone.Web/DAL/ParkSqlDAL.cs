@@ -10,8 +10,8 @@ namespace Capstone.Web.DAL
 {
     public class ParkSqlDAL : IParkDAL
     {
-        private string connectionString = @"Data Source=DESKTOP-58F8CH1\SQLEXPRESS;Initial Catalog=ParkDB;Integrated Security=True";
-        //private string connectionString = @"Data Source=DESKTOP-U3MOBAH\SS;Initial Catalog=ParkDB;Integrated Security=True";
+        //private string connectionString = @"Data Source=DESKTOP-58F8CH1\SQLEXPRESS;Initial Catalog=ParkDB;Integrated Security=True";
+        private string connectionString = @"Data Source=DESKTOP-U3MOBAH\SS;Initial Catalog=ParkDB;Integrated Security=True";
 
         private const string getAllParkSqlCommand = "SELECT * FROM park";
         private const string getParkIdSqlCommand = "SELECT * FROM park WHERE parkCode= @parkCode";
