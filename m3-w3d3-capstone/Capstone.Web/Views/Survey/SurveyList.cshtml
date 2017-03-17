@@ -3,40 +3,51 @@
     ViewBag.Title = "SurveyList";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-@model List<Survey>
+@model Dictionary<string, ParkSurvey>
 
 <h2>Survey List</h2>
 
 <div class="list-group">
-    @foreach (var item in Model)
-    {
-        <a href="#" class="list-group-item">
-            <h4 class="list-group-item-heading">List group item heading</h4>
-            <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-        </a>
-    }
-    <div class="ui cards">
-        <div class="card">
-            <div class="image">
-                <img src="~/Content/Assets/gnp.jpg">
-            </div>
-            <div class=" content">
-                <div class="header">Matt Giampietro</div>
-                <div class="meta">
-                    <a>Friends</a>
-                </div>
-                <div class="description">
-                    Matthew is an interior designer living in New York.
-                </div>
-            </div>
-            <div class="ui heart rating" data-rating="1" data-max-rating="3"></div>
-            <div class="extra content">
-                <span class="right floated">
-                    <button class="ui toggle button"><i class="arrow up icon"></i><i class="arrow down icon"></i>Vote</button>
-                </span>
-            </div>
-        </div>
+    <div class="ui link cards">
+        @foreach (var item in Model)
+        {
+            <div class="card">
+                <div class="image">
+                    <a class="ui left corner label" style=" cursor:default !important;">
+                        <i class="heart icon " style="color: #FF6D75 !important; cursor:default !important;"></i>
+                    </a>
+                    @{string imagePath = item.Key + ".jpg";}
+                    <img src="~/Content/Assets/@imagePath" alt="park image" />
 
+                </div>
+                <div class=" content">
+                    <div class="header">@item.Value.ParkName</div>
+                    <div class="description">
+                        @item.Value.State
+                    </div>
+                </div>
+
+                <div class="extra content">
+                    <div class="ui labeled button" tabindex="0">
+                        <div class="ui  button">
+                            <i class="heart icon"></i> Votes
+                        </div>
+                        <a style=" cursor:default !important;" class="ui basic left pointing label ">
+                            1,048 
+                            <div class="ui heart rating" data-rating="3" data-max-rating="4"></div>
+                            <script>
+                                $('.ui.rating')
+                                    .rating({
+                                        initialRating: 3,
+                                        maxRating: 5
+                                    })
+                                    ;</script>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+                        }
     </div>
 
 </div>

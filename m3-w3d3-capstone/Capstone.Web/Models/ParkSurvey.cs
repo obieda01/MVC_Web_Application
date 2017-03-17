@@ -7,12 +7,29 @@ namespace Capstone.Web.Models
 {
     public class ParkSurvey
     {
-        public String ParkCode { get; set; }
-        public String ParkName { get; set; }
+        public string ParkCode { get; set; }
+        public string ParkName { get; set; }
         public string State { get; set; }
-        public int InactiveVotes { get; set; }
-        public int SedentaryVotes { get; set; }
-        public int ActiveVotes { get; set; }
-        public int ExtremelyActiveVotes { get; set; }
+        public string ActivityLevel { get; set; }
+
+        public Dictionary<string, ParkSurvey> getAllPrakSuervey()
+        {
+            Dictionary<string, ParkSurvey> ParkSurveys = new Dictionary<string, ParkSurvey>();
+
+            foreach (var item in new Park().getAllParkSql())
+            {
+                if (!ParkSurveys.ContainsKey(item.ParkCode))
+                {
+                    ParkSurvey parkSurvey = new ParkSurvey();
+                    parkSurvey.ParkCode = item.ParkCode;
+                    parkSurvey.ParkName = item.ParkName;
+                    parkSurvey.State = item.State;
+                    parkSurvey.ActivityLevel = "0";
+                    ParkSurveys.Add(item.ParkCode, parkSurvey);
+                }
+            }
+            return ParkSurveys;
+
+        }
     }
 }

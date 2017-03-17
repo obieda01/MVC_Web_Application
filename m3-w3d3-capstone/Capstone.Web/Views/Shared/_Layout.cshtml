@@ -8,35 +8,48 @@
     <!-- -->
 
     <!-- StyleSheets-->
-    <link rel="stylesheet" type="text/css" href="~/Content/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="~/Content/semantic.css">
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="~/Content/semantic.min.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="header-site">
-            <div>
-                <!--  <img src="~/Content/logo.png" style="float:left;" />--> 
-                @*<h2 style="text-align:center">National Park Weather Service</h2>*@
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav" style="float:right;">
-                    <li>@Html.ActionLink("National Parks", "ParkList", "Home")</li>
-                    <li><a href="@Url.Action("Index", "Home")">See all Parks</a></li>
-                    <li><a href="@Url.Action( "SurveyList", "Survey")">Survey</a></li>
-                </ul>
+    <div>
+        <div class="ui inverted segment">
+            <div class="ui inverted secondary pointing menu">
+                <a href="@Url.Action("ParkList", "Home")" class="item active">
+                    See all Parks
+                </a>
+
+                <a class="item" href="@Url.Action( "SurveyList", "Survey")">Survey</a>
+                <a class="item" href="@Url.Action( "SurveyList", "Survey")">Survey
+                </a>
             </div>
         </div>
-        <div class="jumbotron">
-            @RenderBody()
-            <br />
-        </div>
-        <footer>
-            <p style="text-align:center;">&copy; 2017 - @DateTime.Now.Year - National Park Weather Service Application</p>
-            <div>
-                @RenderSection("AfterCopyright", false)
+        <div class="ui  container segment">
+            <div class="header-site">
+                <div>
+                    <!--  <img src="~/Content/logo.png" style="float:left;" />-->
+                    @*<h2 style="text-align:center">National Park Weather Service</h2>*@
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav" style="float:right;">
+                        <li>@Html.ActionLink("National Parks", "ParkList", "Home")</li>
+                        <li><a href="@Url.Action("Index", "Home")">See all Parks</a></li>
+                        <li><a href="@Url.Action( "SurveyList", "Survey")">Survey</a></li>
+                    </ul>
+                </div>
             </div>
-        </footer>
+            <div class="jumbotron">
+                @RenderBody()
+                <br />
+            </div>
+            <footer>
+                <p style="text-align:center;">&copy; 2017 - @DateTime.Now.Year - National Park Weather Service Application</p>
+                <div>
+                    @RenderSection("AfterCopyright", false)
+                </div>
+            </footer>
+        </div>
     </div>
 </body>
 </html>

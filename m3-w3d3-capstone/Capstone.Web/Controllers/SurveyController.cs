@@ -16,9 +16,7 @@ namespace Capstone.Web.Controllers
         // GET: Survey/
         public ActionResult SurveyList()
         {
-            List<Survey> allSurvey = new Survey().getAllSurveySql();
-
-            return View("SurveyList", allSurvey);
+            return View("SurveyList", new ParkSurvey().getAllPrakSuervey());
         }
         public ActionResult AddSurvey()
         {
@@ -37,6 +35,7 @@ namespace Capstone.Web.Controllers
                 return View("AddSurvey");
             }
             ISurveyDAL newSurvey = new SurveySqlDAL();
+            model.ParkCode = "ENP";
             if (newSurvey.addNewSurvey(model))
             {
                 return RedirectToAction("SurveyList","Survey");

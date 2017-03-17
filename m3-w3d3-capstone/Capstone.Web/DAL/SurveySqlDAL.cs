@@ -73,9 +73,9 @@ namespace Capstone.Web.DAL
             }
         }
 
-        public List<ParkSurvey> getSurveyByPark(string parkCode)
+        public Dictionary<string,ParkSurvey> getSurveyByPark(string parkCode)
         {
-            return new List<ParkSurvey>();
+            return new Dictionary<string, ParkSurvey>();
         }
 
     }
