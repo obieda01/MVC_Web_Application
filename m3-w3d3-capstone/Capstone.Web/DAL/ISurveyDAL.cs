@@ -1,9 +1,5 @@
-﻿using System;
+﻿using Capstone.Web.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Capstone.Web.Models;
 
 namespace Capstone.Web.DAL
 {
@@ -11,6 +7,6 @@ namespace Capstone.Web.DAL
     {
         List<Survey> getAllSurvey();
         bool addNewSurvey(Survey newSurvey);
-
+        List<ParkSurvey> getSurveyByPark(string parkCode);
     }
 }

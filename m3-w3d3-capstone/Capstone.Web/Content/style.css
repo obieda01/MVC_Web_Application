@@ -19,7 +19,6 @@
     margin-top:0px;
     padding-top:0px;
     color:#663300;
-
 }
  .jumbotron{
      width:85%;
@@ -30,12 +29,10 @@
      /*color:#ff6a00;*/
      /*color:azure;*/
      color:#3366FF;
-
  }
  .park-detail-img{
     width: 250px;
     height: 200px;
-    
  }
  .container {
       background-color:black;

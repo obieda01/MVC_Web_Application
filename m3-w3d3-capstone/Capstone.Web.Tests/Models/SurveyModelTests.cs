@@ -1,7 +1,7 @@
-﻿using System;
-using System.Reflection;
-using Capstone.Web.Models;
+﻿using Capstone.Web.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.Reflection;
 
 namespace Capstone.Web.Tests.Models
 {
@@ -16,7 +16,7 @@ namespace Capstone.Web.Tests.Models
 
             Assert.IsTrue(property.CanRead);
             Assert.IsTrue(property.CanWrite);
-            Assert.AreEqual(typeof(string),property.PropertyType);
+            Assert.AreEqual(typeof(string), property.PropertyType);
             Assert.IsNotNull(property);
         }
     }

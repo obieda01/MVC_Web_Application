@@ -1,10 +1,7 @@
-﻿using System;
+﻿using Capstone.Web.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Transactions;
-using Capstone.Web.Models;
 
 namespace Capstone.Web.DAL
 {
@@ -49,7 +46,6 @@ namespace Capstone.Web.DAL
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -76,6 +72,11 @@ namespace Capstone.Web.DAL
                 return false;
             }
         }
+
+        public List<ParkSurvey> getSurveyByPark(string parkCode)
+        {
+            return new List<ParkSurvey>();
+        }
+
     }
 }
-

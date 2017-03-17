@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @model List<Survey>
-<link href="~/Content/" rel="stylesheet" />
+
 <h2>Survey List</h2>
 
 <div class="list-group">
@@ -15,20 +15,28 @@
             <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
         </a>
     }
-    <div class="row">
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
-                <img src="..." alt="...">
-                <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>...</p>
-                    <p>
-                        <a href="#" class="" role="button">
-                       
-                        </a> <a href="#" class="btn btn-default" role="button">Button</a>
-                    </p>
+    <div class="ui cards">
+        <div class="card">
+            <div class="image">
+                <img src="~/Content/Assets/gnp.jpg">
+            </div>
+            <div class=" content">
+                <div class="header">Matt Giampietro</div>
+                <div class="meta">
+                    <a>Friends</a>
+                </div>
+                <div class="description">
+                    Matthew is an interior designer living in New York.
                 </div>
             </div>
+            <div class="ui heart rating" data-rating="1" data-max-rating="3"></div>
+            <div class="extra content">
+                <span class="right floated">
+                    <button class="ui toggle button"><i class="arrow up icon"></i><i class="arrow down icon"></i>Vote</button>
+                </span>
+            </div>
         </div>
+
     </div>
+
 </div>

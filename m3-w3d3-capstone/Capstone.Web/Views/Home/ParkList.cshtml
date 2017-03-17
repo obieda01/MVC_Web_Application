@@ -12,18 +12,18 @@
 
           <div style="float:left;">
               @{string imagePath = park.ParkCode.ToLower() + ".jpg";}
-              @*<img src="~/Content/Assets/@imagePath" alt="park image" style="float:left;"/>*@
+              @*<img src="~/Content/Assets/@imagePath" alt="park image" style="float:left;" />*@
 
               <a href='@Url.Action("ParkDetails", "Home", new { id = park.ParkCode })'>
-                  <img src="~/Content/Assets/@imagePath" alt="park image"  />
+                  <img src="~/Content/Assets/@imagePath" alt="park image" />
               </a>
               <h3 style="text-align:center;">@park.State</h3>
           </div>
 
           <div style="display:inline-block; width:450px;margin-left:30px;vertical-align:top;"> <br />
               <p>@park.ParkDescription</p>
-          </div>        
+          </div>
       </div>
     <hr />
-                    
+
      }

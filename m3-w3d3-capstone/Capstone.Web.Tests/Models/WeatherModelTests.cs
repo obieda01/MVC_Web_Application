@@ -1,7 +1,7 @@
-﻿using System;
-using System.Reflection;
-using Capstone.Web.Models;
+﻿using Capstone.Web.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.Reflection;
 
 namespace Capstone.Web.Tests.Models
 {
