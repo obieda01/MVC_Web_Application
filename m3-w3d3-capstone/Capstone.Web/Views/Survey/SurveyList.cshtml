@@ -2,33 +2,63 @@
 @{
     ViewBag.Title = "SurveyList";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    int counter = 1;
+    double maxVote = 0;
+    double averageRate=0;
 }
-@model List<Survey>
-<link href="~/Content/" rel="stylesheet" />
-<h2>Survey List</h2>
+@model List<KeyValuePair<string, ParkSurvey>>
 
-<div class="list-group">
-    @foreach (var item in Model)
-    {
-        <a href="#" class="list-group-item">
-            <h4 class="list-group-item-heading">List group item heading</h4>
-            <p class="list-group-item-text">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
-        </a>
-    }
-    <div class="row">
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
-                <img src="..." alt="...">
-                <div class="caption">
-                    <h3>Thumbnail label</h3>
-                    <p>...</p>
-                    <p>
-                        <a href="#" class="" role="button">
-                       
-                        </a> <a href="#" class="btn btn-default" role="button">Button</a>
-                    </p>
+<div class="list-group center">
+    <div class="ui link centered cards">
+        @foreach (var item in Model)
+        {
+            <div class="card">
+                <div class="image">
+                    @if (counter == 1)
+                    {
+                        <a class="ui left corner label" style=" cursor:default !important;">
+                            <i class="heart icon " style="color: #b40c15 !important; cursor:default !important;"></i>
+                        </a>
+                        <a class="ui right corner red small label" style="color: #f2b6b6 !important;cursor:default !important;">Highest Votes</a>
+                        maxVote = int.Parse(item.Value.ActivityLevel);
+                        counter++;
+                    }
+                    @{string imagePath = item.Key + ".jpg";}
+                    <img src="~/Content/Assets/@imagePath" alt="park image" />
+
+                </div>
+                <div class=" content">
+                    <div class="header">@item.Value.ParkName</div>
+                    <div class="description">
+                        @item.Value.State
+                    </div>
+                </div>
+
+                <div class="extra content">
+                    <div class="ui labeled button" tabindex="0">
+                        <div>
+
+                            <a href="@Url.Action("AddSurvey", "Survey", new { id = item.Key })"> <input type="submit" name="Vote" value="Vote" class="ui button" /></a>
+                        </div>
+                        <a style=" cursor:default !important;" class="ui basic left pointing label ">
+                            <div style="padding-right:1em;">@item.Value.ActivityLevel</div>
+                            @{
+                                averageRate = (int)((double.Parse(item.Value.ActivityLevel) / maxVote)*5);
+                            }
+                            <div class="ui heart rating" data-rating="@averageRate" data-max-rating="5"></div>
+                            <script>
+                                $('.ui.rating')
+                                    .rating({
+                                        initialRating: 3,
+                                        maxRating: 5
+                                    })
+                                    ;</script>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
+
+                        }
     </div>
+
 </div>

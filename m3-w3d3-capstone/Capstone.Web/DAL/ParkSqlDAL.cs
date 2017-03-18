@@ -1,9 +1,6 @@
-﻿using System;
+﻿using Capstone.Web.Models;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Transactions;
-using Capstone.Web.Models;
 using System.Data.SqlClient;
 
 namespace Capstone.Web.DAL
@@ -14,8 +11,8 @@ namespace Capstone.Web.DAL
         //private string connectionString = @"Data Source=DESKTOP-U3MOBAH\SS;Initial Catalog=ParkDB;Integrated Security=True";
 
         private const string getAllParkSqlCommand = "SELECT * FROM park order by state";
-        private const string getParkIdSqlCommand = "SELECT * FROM park WHERE parkCode= @parkCode";
 
+        private const string getParkIdSqlCommand = "SELECT * FROM park WHERE parkCode= @parkCode";
 
         public string ConnectionString
         {
@@ -30,7 +27,6 @@ namespace Capstone.Web.DAL
             {
                 using (SqlConnection conn = new SqlConnection(ConnectionString))
                 {
-
                     conn.Open();
                     SqlCommand command = new SqlCommand(getAllParkSqlCommand, conn);
                     SqlDataReader reader = command.ExecuteReader();
@@ -59,12 +55,9 @@ namespace Capstone.Web.DAL
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
-
-
 
         public Park getParkIdData(string parkCode)
         {
@@ -73,7 +66,6 @@ namespace Capstone.Web.DAL
             {
                 using (SqlConnection conn = new SqlConnection(ConnectionString))
                 {
-
                     conn.Open();
                     SqlCommand command = new SqlCommand(getParkIdSqlCommand, conn);
                     string sql = @"'" + parkCode + @"'";
@@ -99,10 +91,8 @@ namespace Capstone.Web.DAL
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
-
     }
 }

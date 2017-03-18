@@ -3,8 +3,12 @@
 }
 @using Capstone.Web.Models;
 @model List<Weather>
-<div>
 
+@*As a user of the system, once I select a park for viewing I have a way of viewing its 5-day
+    weather forecast. Each daily forecast should provide a recommendation so that the
+    user knows how to prepare for the weather appropriately.*@
+
+<div>
     <table>
         <thead>
             <h2 style="font-weight:bold; text-align:center;">5 Day Weather Forecaset</h2>
@@ -114,6 +118,5 @@
             }
         </tr>
     </table>
-
 </div>
 

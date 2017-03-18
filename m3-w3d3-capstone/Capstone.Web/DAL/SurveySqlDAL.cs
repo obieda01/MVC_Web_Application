@@ -1,10 +1,7 @@
-﻿using System;
+﻿using Capstone.Web.Models;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Transactions;
-using Capstone.Web.Models;
 
 namespace Capstone.Web.DAL
 {
@@ -15,6 +12,7 @@ namespace Capstone.Web.DAL
 
         private const string getAllSurveySqlCommand = "SELECT* FROM survey_result;";
         private const string addNewSurveySqlCommand = @"INSERT INTO survey_result ([parkCode],[emailAddress],[state],[activityLevel]) VALUES(@ParkCode,@EmailAddress,@State,@ActivityLevel)";
+        private const string getSumActivityLevelByParkSqlCommand = @"SELECT sum(CONVERT(INT, activityLevel))from survey_result as p WHERE parkCode=@parkCode GROUP By parkCode;";
 
         public string ConnectionString
         {
@@ -23,6 +21,28 @@ namespace Capstone.Web.DAL
         }
 
         public static string AddNewSurveySqlCommand => addNewSurveySqlCommand;
+
+        public string activityLevelByPark(string parkCode)
+        {
+            string rate = String.Empty;
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(ConnectionString))
+                {
+                    conn.Open();
+                    SqlCommand command = new SqlCommand(getSumActivityLevelByParkSqlCommand, conn);
+                    command.Parameters.AddWithValue("@parkCode", parkCode);
+                    int value = (int)command.ExecuteScalar();
+                    return value.ToString();
+                }
+            }
+            catch (Exception)
+            {
+                return "0".ToString();
+            }
+           
+        }
+
 
         public List<Survey> getAllSurvey()
         {
@@ -49,7 +69,6 @@ namespace Capstone.Web.DAL
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -76,6 +95,11 @@ namespace Capstone.Web.DAL
                 return false;
             }
         }
+
+        public Dictionary<string, ParkSurvey> getSurveyByPark(string parkCode)
+        {
+            return new Dictionary<string, ParkSurvey>();
+        }
+
     }
 }
-

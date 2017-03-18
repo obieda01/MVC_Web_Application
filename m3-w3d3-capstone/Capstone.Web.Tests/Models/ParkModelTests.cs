@@ -1,7 +1,7 @@
-﻿using System;
-using System.Reflection;
+﻿using Capstone.Web.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Capstone.Web.Models;
+using System;
+using System.Reflection;
 
 namespace Capstone.Web.Tests.Models
 {
@@ -11,13 +11,13 @@ namespace Capstone.Web.Tests.Models
         [TestMethod]
         public void ParkModelTests_ParkCodeProperty_Test()
         {
-            Type type=typeof(Park);
+            Type type = typeof(Park);
             PropertyInfo property = type.GetProperty("ParkCode");
 
             Assert.IsNotNull(property);
             Assert.IsTrue(property.CanWrite);
             Assert.IsTrue(property.CanRead);
-            Assert.AreEqual(typeof(string),property.PropertyType);
+            Assert.AreEqual(typeof(string), property.PropertyType);
         }
 
         [TestMethod]

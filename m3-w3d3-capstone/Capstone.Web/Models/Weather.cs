@@ -1,10 +1,5 @@
-﻿using System;
+﻿using Capstone.Web.DAL;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using System.Transactions;
-using Capstone.Web.DAL;
 
 namespace Capstone.Web.Models
 {
@@ -26,13 +21,12 @@ namespace Capstone.Web.Models
         public string Forecast { get; set; }
         public string Tempature { get; set; }
 
-        private  IWeatherDAL weatherDAL;
+        private IWeatherDAL weatherDAL;
 
         public List<Weather> getFiveDaysWeather(string parkCode)
         {
             weatherDAL = new WeatherSqlDAL();
             return weatherDAL.getWeatherByParkCode(parkCode);
         }
-
     }
 }

@@ -1,13 +1,10 @@
-﻿using System;
-using System.Configuration;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Reflection;
-using System.Web.Util;
-using System.Transactions;
-using System.Data.SqlClient;
-using Capstone.Web.DAL;
-using System.Collections.Generic;
+﻿using Capstone.Web.DAL;
 using Capstone.Web.Models;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
+using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Transactions;
 
 namespace Capstone.Web.Tests.DAL
 {
@@ -16,11 +13,12 @@ namespace Capstone.Web.Tests.DAL
     {
         // private string connectionString = @"Data Source=DESKTOP-58F8CH1\SQLEXPRESS;Initial Catalog=ParkDB;Integrated Security=True";
         private string connectionString = @"Data Source=DESKTOP-U3MOBAH\SS;Initial Catalog=ParkDB;Integrated Security=True";
+
         private const string getAllSurveySqlCommand = "SELECT* FROM survey_result;";
         private const string addNewSurveySqlCommand = @"INSERT INTO survey_result ([parkCode],[emailAddress],[state],[activityLevel]) VALUES(@ParkCode,@EmailAddress,@State,@ActivityLevel)";
         private int rowAffected = 0;
 
-        TransactionScope tran;
+        private TransactionScope tran;
 
         [TestInitialize]
         public void initializer()
@@ -28,7 +26,7 @@ namespace Capstone.Web.Tests.DAL
             tran = new TransactionScope();
             try
             {
-                using (SqlConnection conn =new SqlConnection(connectionString))
+                using (SqlConnection conn = new SqlConnection(connectionString))
                 {
                     conn.Open();
                     SqlCommand command = new SqlCommand(getAllSurveySqlCommand, conn);
@@ -44,7 +42,6 @@ namespace Capstone.Web.Tests.DAL
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -64,7 +61,7 @@ namespace Capstone.Web.Tests.DAL
             //Act
             List<Survey> allSurveies = surveyDAL.getAllSurvey();
 
-            //Assert 
+            //Assert
             Assert.IsNotNull(surveyDAL);
             Assert.IsNotNull(allSurveies);
             Assert.AreEqual(rowAffected, allSurveies.Count);
@@ -83,7 +80,7 @@ namespace Capstone.Web.Tests.DAL
             ////Act
             //bool successAdding = surveyDAL.addNewSurvey(newSurvey);
 
-            //Assert 
+            //Assert
             //Assert.IsTrue(successAdding);
             Assert.IsNotNull(surveyDAL);
             Assert.AreEqual(rowAffected, surveyDAL.getAllSurvey().Count);

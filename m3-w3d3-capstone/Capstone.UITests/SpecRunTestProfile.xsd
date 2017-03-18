@@ -42,7 +42,7 @@
     <xs:attribute name="testSchedulingMode" type="TestSchedulingMode" use="optional" default="Sequential" />
     <xs:attribute name="testThreadCount" type="xs:int" use="optional" default="1" />
     <xs:attribute name="retryFor" type="RetryMode" use="optional" default="Failing" />
-    <xs:attribute name="retryCount" type="xs:int" use="optional" default="2"  />
+    <xs:attribute name="retryCount" type="xs:int" use="optional" default="2" />
     <xs:attribute name="apartmentState" type="ApartmentState" use="optional" default="Unknown" />
   </xs:complexType>
 
@@ -73,7 +73,7 @@
     <xs:attribute name="copyAlsoToBaseFolder" type="xs:boolean" use="optional" default="false" />
     <xs:attribute name="disable" type="xs:boolean" use="optional" default="false" />
   </xs:complexType>
-  
+
   <!-- test targets -->
 
   <xs:complexType name="Targets">
@@ -159,7 +159,7 @@
   </xs:complexType>
 
   <!-- simple types-->
-  
+
   <xs:simpleType name="TestSchedulingMode">
     <xs:restriction base="xs:string">
       <xs:enumeration value="Sequential" />
@@ -189,7 +189,7 @@
       <xs:enumeration value="MTA" />
     </xs:restriction>
   </xs:simpleType>
-  
+
   <xs:simpleType name="FrameworkVersion">
     <xs:restriction base="xs:string">
       <xs:enumeration value="Default" />
@@ -206,7 +206,7 @@
       <xs:enumeration value="x64" />
     </xs:restriction>
   </xs:simpleType>
-  
+
   <xs:simpleType name="TestThreadIsolation">
     <xs:restriction base="xs:string">
       <xs:enumeration value="SharedAppDomain" />
@@ -214,5 +214,4 @@
       <xs:enumeration value="Process" />
     </xs:restriction>
   </xs:simpleType>
-  
 </xs:schema>

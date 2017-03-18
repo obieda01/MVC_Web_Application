@@ -1,10 +1,4 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Capstone.Web.Controllers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Web.Mvc;
 
 namespace Capstone.Web.Controllers.Tests
@@ -16,7 +10,7 @@ namespace Capstone.Web.Controllers.Tests
         public void HomeController_IndexAction_ReturnIndexView()
         {
             /*TEST
-             * 
+             *
              * Test if the index action return index view (the right view)
             */
 
@@ -34,7 +28,7 @@ namespace Capstone.Web.Controllers.Tests
         public void HomeController_ParkListAction_ReturnParkListView()
         {
             /*TEST
-             * 
+             *
              * Test if the ParkList Action return ParkList view (the right view)
             */
 

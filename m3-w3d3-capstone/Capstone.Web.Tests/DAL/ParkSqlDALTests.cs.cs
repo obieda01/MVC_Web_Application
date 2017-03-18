@@ -1,19 +1,19 @@
-﻿using System;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System.Transactions;
-using System.Data.SqlClient;
-using Capstone.Web.DAL;
+﻿using Capstone.Web.DAL;
 using Capstone.Web.Models;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
+using System.Transactions;
 
 namespace Capstone.Web.Tests.DAL
 {
     [TestClass]
     public class ParkSqlDALTests
     {
-
         // private string connectionString = @"Data Source=DESKTOP-58F8CH1\SQLEXPRESS;Initial Catalog=ParkDB;Integrated Security=True";
         private string connectionString = @"Data Source=DESKTOP-U3MOBAH\SS;Initial Catalog=ParkDB;Integrated Security=True";
+
         private const string getAllParkSqlCommand = "SELECT * FROM park";
         private const string getParkIdSqlCommand = "SELECT * FROM park WHERE parkCode= @parkCode";
         private TransactionScope tran;
@@ -73,7 +73,6 @@ namespace Capstone.Web.Tests.DAL
             Assert.IsNotNull(affectedPark);
             Assert.AreEqual("Tropical", affectedPark.Climate);
             Assert.AreEqual("Marjory Stoneman Douglas", affectedPark.InspirationalQuoteSource);
-
         }
     }
 }

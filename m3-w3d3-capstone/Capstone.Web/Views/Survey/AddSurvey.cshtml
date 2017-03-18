@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "AddSurvey";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Capstone.Web.Models.Survey
+@using Capstone.Web.Models
+
+<h2>Add Survey</h2>
+@using (Html.BeginForm("AddSurvey", "Survey", FormMethod.Post))
+{
+    <div class="ui form error">
+
+        <div class="field">
+
+            @Html.LabelFor(Model => Model.EmailAddress)
+            @Html.TextBoxFor(Model => Model.EmailAddress, new { placeholder = "joe@schmoe.com" })
+        </div>
+        <div class="field">
+            @Html.Label("States", "State (Required):")
+            @Html.DropDownListFor(m => m.State, Survey.States)
+        </div>
+        <div class="grouped fields">
+            <label></label>
+
+            @Html.Label("Activity_Level", "How much you rate the physical activity level (Required)?")
+            @Html.DropDownListFor(m => m.ActivityLevel, Survey.ActivityLevels)
+        </div>
+        <div class="field ">
+            <div class="ui  @ViewBag.visable error message">
+                <div class="header">Action Forbidden</div>
+                    <p>@Html.ValidationMessageFor(Model => Model.EmailAddress)</p>
+                    <p>@Html.ValidationMessageFor(Model => Model.State)</p>
+                    <p>@Html.ValidationMessageFor(Model => Model.ActivityLevel)</p>
+            </div>
+        </div>
+        <button class="ui button">Submit</button>
+
+    </div>
+}

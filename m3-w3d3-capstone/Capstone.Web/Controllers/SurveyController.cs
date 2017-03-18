@@ -1,10 +1,7 @@
-﻿using System;
+﻿using Capstone.Web.Models;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using Capstone.Web.DAL;
-using Capstone.Web.Models;
 
 namespace Capstone.Web.Controllers
 {
@@ -15,12 +12,39 @@ namespace Capstone.Web.Controllers
         {
             return RedirectToAction("SurveyList");
         }
+
         // GET: Survey/
         public ActionResult SurveyList()
         {
-            List<Survey> allSurvey = new Survey().getAllSurveySql();
+            return View("SurveyList", new ParkSurvey().getAllPrakSuervey());
+        }
+        public ActionResult AddSurvey()
+        {
 
-            return View("SurveyList",allSurvey);
+            ViewBag.visable = "hidden";
+            return View("AddSurvey");
+        }
+        // GET: Survey/addSurvey
+        [HttpPost]
+        public ActionResult AddSurvey(Survey model, string id)
+        {
+
+            ViewBag.visable = "hidden";
+            if (!ModelState.IsValid)
+            {
+                ViewBag.visable = "";
+                return View("AddSurvey");
+            }
+            ISurveyDAL newSurvey = new SurveySqlDAL();
+            model.ParkCode = id;
+            if (newSurvey.addNewSurvey(model))
+            {
+                return RedirectToAction("SurveyList", "Survey");
+            }
+            else
+            {
+                return View("AddSurvey");
+            }
         }
     }
 }

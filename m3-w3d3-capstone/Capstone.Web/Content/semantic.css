@@ -25603,7 +25603,7 @@ a.ui.card,
 .ui.link.cards .card:hover,
 a.ui.card:hover,
 .ui.link.card:hover {
-  cursor: pointer;
+  cursor: default;
   z-index: 5;
   background: #FFFFFF;
   border: none;
@@ -32918,7 +32918,7 @@ a.ui.nag {
   -webkit-box-flex: 1;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto;
-  cursor: pointer;
+  cursor:default;
   width: 1.25em;
   height: auto;
   -webkit-transition: opacity 0.1s ease, background 0.1s ease, text-shadow 0.1s ease, color 0.1s ease;
@@ -33001,18 +33001,20 @@ a.ui.nag {
 /* Active Heart */
 
 .ui.heart.rating .active.icon {
-  background: transparent !important;
-  color: #FF6D75 !important;
-  text-shadow: 0px -1px 0px #CD0707, -1px 0px 0px #CD0707, 0px 1px 0px #CD0707, 1px 0px 0px #CD0707 !important;
+    cursor: default !important;
+    background: transparent !important;
+    color: #FF6D75 !important;
+    text-shadow: 0px -1px 0px #CD0707, -1px 0px 0px #CD0707, 0px 1px 0px #CD0707, 1px 0px 0px #CD0707 !important;
 }
 
 /* Selected Heart */
 
 .ui.heart.rating .icon.selected,
 .ui.heart.rating .icon.selected.active {
-  background: transparent !important;
-  color: #FF3000 !important;
-  text-shadow: 0px -1px 0px #AA0101, -1px 0px 0px #AA0101, 0px 1px 0px #AA0101, 1px 0px 0px #AA0101 !important;
+    cursor: default !important;
+    background: transparent !important;
+    color: #FF3000 !important;
+    text-shadow: 0px -1px 0px #AA0101, -1px 0px 0px #AA0101, 0px 1px 0px #AA0101, 1px 0px 0px #AA0101 !important;
 }
 
 /*******************************
