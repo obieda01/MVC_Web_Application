@@ -83,7 +83,7 @@
                             <img src="~/Content/Assets/snow.png" class="td-img" />
                         </div>
                             <div>
-                                <p>Pack snow shoes and dress in layers</p>
+                                <p>Pack snow shoes / Dress in layers</p>
                             </div>
                     }
                     else if (item.Forecast == "rain")
@@ -108,15 +108,16 @@
 
                     @if (item.High > 75)
                     {
-                        <span>Bring an extra gallon of water</span>
+                        <p>Bring an extra gallon of water</p>
                     }
                     @if (item.High - item.Low == 20)
                     {
-                        <span>Very humid - wear breathable layers</span>
+                        <p>Very humid - Wear breathable layers</p>
                     }
                 </td>
             }
         </tr>
     </table>
+    <hr />
 </div>
 
