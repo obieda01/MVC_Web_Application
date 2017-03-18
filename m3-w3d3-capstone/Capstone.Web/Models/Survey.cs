@@ -19,7 +19,7 @@ namespace Capstone.Web.Models
         public string EmailAddress { get; set; }
 
         //state varchar(30) not null,
-        [Required(ErrorMessage = "Sorry, State is required, don't be anonymous")]
+        [Required(ErrorMessage = "The State field is required.")]
         public string State { get; set; }
 
         public static List<SelectListItem> States
@@ -83,7 +83,7 @@ namespace Capstone.Web.Models
         }
 
         //activityLevel varchar(100) not null,
-        [Required(ErrorMessage = "Sorry, State is required, don't be anonymous")]
+        [Required(ErrorMessage = "The Activity Level field is required.")]
         public string ActivityLevel { get; set; }
 
         public static List<SelectListItem> ActivityLevels
@@ -96,7 +96,7 @@ namespace Capstone.Web.Models
                  new SelectListItem{Text="Inactive",Value="1"},
                  new SelectListItem{Text="Sedentary",Value="2"},
                  new SelectListItem{Text="Active",Value="3"},
-                 new SelectListItem{Text="Extremely Active",Value="3"},
+                 new SelectListItem{Text="Extremely Active",Value="4"},
 
                 };
             }

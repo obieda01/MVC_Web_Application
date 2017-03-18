@@ -20,12 +20,13 @@ namespace Capstone.Web.Controllers
         }
         public ActionResult AddSurvey()
         {
+
             ViewBag.visable = "hidden";
             return View("AddSurvey");
         }
         // GET: Survey/addSurvey
         [HttpPost]
-        public ActionResult AddSurvey(Survey model)
+        public ActionResult AddSurvey(Survey model, string id)
         {
 
             ViewBag.visable = "hidden";
@@ -35,10 +36,10 @@ namespace Capstone.Web.Controllers
                 return View("AddSurvey");
             }
             ISurveyDAL newSurvey = new SurveySqlDAL();
-            model.ParkCode = "ENP";
+            model.ParkCode = id;
             if (newSurvey.addNewSurvey(model))
             {
-                return RedirectToAction("SurveyList","Survey");
+                return RedirectToAction("SurveyList", "Survey");
             }
             else
             {

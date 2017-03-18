@@ -8,5 +8,6 @@ namespace Capstone.Web.DAL
         List<Survey> getAllSurvey();
         bool addNewSurvey(Survey newSurvey);
         Dictionary<string, ParkSurvey> getSurveyByPark(string parkCode);
+        string activityLevelByPark(string parkCode);
     }
 }

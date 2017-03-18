@@ -2,20 +2,28 @@
 @{
     ViewBag.Title = "SurveyList";
     Layout = "~/Views/Shared/_Layout.cshtml";
+    int counter = 1;
+    double maxVote = 0;
+    double averageRate=0;
 }
-@model Dictionary<string, ParkSurvey>
-
+@model List<KeyValuePair<string, ParkSurvey>>
 <h2>Survey List</h2>
 
-<div class="list-group">
-    <div class="ui link cards">
+<div class="list-group center">
+    <div class="ui link centered cards">
         @foreach (var item in Model)
         {
             <div class="card">
                 <div class="image">
-                    <a class="ui left corner label" style=" cursor:default !important;">
-                        <i class="heart icon " style="color: #FF6D75 !important; cursor:default !important;"></i>
-                    </a>
+                    @if (counter == 1)
+                    {
+                        <a class="ui left corner label" style=" cursor:default !important;">
+                            <i class="heart icon " style="color: #b40c15 !important; cursor:default !important;"></i>
+                        </a>
+                        <a class="ui right corner red small label" style="color: #f2b6b6 !important;cursor:default !important;">Highest Votes</a>
+                        maxVote = int.Parse(item.Value.ActivityLevel);
+                        counter++;
+                    }
                     @{string imagePath = item.Key + ".jpg";}
                     <img src="~/Content/Assets/@imagePath" alt="park image" />
 
@@ -29,12 +37,16 @@
 
                 <div class="extra content">
                     <div class="ui labeled button" tabindex="0">
-                        <div class="ui  button">
-                            <i class="heart icon"></i> Votes
+                        <div>
+
+                            <a href="@Url.Action("AddSurvey", "Survey", new { id = item.Key })"> <input type="submit" name="Vote" value="Vote" class="ui button" /></a>
                         </div>
                         <a style=" cursor:default !important;" class="ui basic left pointing label ">
-                            1,048 
-                            <div class="ui heart rating" data-rating="3" data-max-rating="4"></div>
+                            <div style="padding-right:1em;">@item.Value.ActivityLevel</div>
+                            @{
+                                averageRate = (int)((double.Parse(item.Value.ActivityLevel) / maxVote)*5);
+                            }
+                            <div class="ui heart rating" data-rating="@averageRate" data-max-rating="5"></div>
                             <script>
                                 $('.ui.rating')
                                     .rating({

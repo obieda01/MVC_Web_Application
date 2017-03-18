@@ -15,6 +15,7 @@ namespace Capstone.Web.Controllers
 
         public ActionResult ParkList()
         {
+            Session["ParkList"] = "active";
             IParkDAL DAL = new ParkSqlDAL();
             List<Park> model = DAL.getAllParksData();
             return View("ParkList", model);

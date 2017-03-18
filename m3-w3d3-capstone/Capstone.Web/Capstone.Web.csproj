@@ -105,6 +105,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\About\gsmnp.jpg" />
+    <Content Include="Content\About\IMG_2407.png" />
     <Content Include="Content\Assets\cloudy.png" />
     <Content Include="Content\Assets\cvnp.jpg" />
     <Content Include="Content\Assets\enp.jpg" />
@@ -281,6 +283,7 @@
   <ItemGroup>
     <Compile Include="App_Start\NinjectWebCommon.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SurveyController.cs" />
     <Compile Include="DAL\IParkDAL.cs" />
@@ -323,6 +326,7 @@
     <Content Include="Content\themes\material\assets\fonts\icons.ttf" />
     <Content Include="Content\themes\material\assets\fonts\icons.woff" />
     <Content Include="Views\Survey\AddSurvey.cshtml" />
+    <Content Include="Views\About\About.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

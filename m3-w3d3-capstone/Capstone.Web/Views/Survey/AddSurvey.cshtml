@@ -4,13 +4,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @model Capstone.Web.Models.Survey
-  
 @using Capstone.Web.Models
-<h2>AddSurvey</h2>
 
+<h2>Add Survey</h2>
 @using (Html.BeginForm("AddSurvey", "Survey", FormMethod.Post))
 {
     <div class="ui form error">
+
         <div class="field">
 
             @Html.LabelFor(Model => Model.EmailAddress)
@@ -29,11 +29,9 @@
         <div class="field ">
             <div class="ui  @ViewBag.visable error message">
                 <div class="header">Action Forbidden</div>
-                <ul class="ui list">
-                    <li>Sorry!@Html.ValidationMessageFor(Model => Model.EmailAddress)</li>
-                    <li>@Html.ValidationMessageFor(Model => Model.State)</li>
-                    <li>@Html.ValidationMessageFor(Model => Model.ActivityLevel)</li>
-                </ul>
+                    <p>@Html.ValidationMessageFor(Model => Model.EmailAddress)</p>
+                    <p>@Html.ValidationMessageFor(Model => Model.State)</p>
+                    <p>@Html.ValidationMessageFor(Model => Model.ActivityLevel)</p>
             </div>
         </div>
         <button class="ui button">Submit</button>
