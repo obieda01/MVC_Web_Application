@@ -39,6 +39,18 @@ namespace Capstone.Web.Controllers
         }
         public ActionResult Weather(string id)
         {
+            IParkDAL DAL = new ParkSqlDAL();
+            List<Park> ParkList = DAL.getAllParksData();
+            List<Weather> weather = new List<Weather>();
+            foreach (Park p in ParkList)
+            {
+                if (id == p.ParkCode)
+                {
+                    IWeatherDAL thisDAL = new WeatherSqlDAL();
+                    weather = thisDAL.getWeatherByParkCode(p.ParkCode);
+                }
+            }
+
             bool isFaranheight;
             Session["Tempature"] = Request.Params["Tempature"];
             if (Session["Tempature"] != null)
@@ -55,19 +67,6 @@ namespace Capstone.Web.Controllers
             else
             {
                 isFaranheight = true;
-            }
-
-
-            IParkDAL DAL = new ParkSqlDAL();
-            List<Park> ParkList = DAL.getAllParksData();
-            List<Weather> weather = new List<Weather>();
-            foreach (Park p in ParkList)
-            {
-                if (id == p.ParkCode)
-                {
-                    IWeatherDAL thisDAL = new WeatherSqlDAL();
-                    weather = thisDAL.getWeatherByParkCode(p.ParkCode);
-                }
             }
             // update to Faranheight or Celcius
             for (int i = 0; i < weather.Count; i++)
