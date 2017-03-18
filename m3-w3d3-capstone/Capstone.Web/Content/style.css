@@ -3,19 +3,24 @@
     height: 95%;
     margin-top:5px;
     margin-right:3px;
-    margin-bottom:10px;
-    border-radius:5px;
+    margin-bottom:2px;
+    border-radius:3px;
 }
 
 .header-site{
       vertical-align:bottom;
       background-color:black;
       width:100%;
+      padding:0px;
+
     }
 .header-site img {
-    width:250px;
+    width:90%;
     height:150px;
-    margin-bottom:2px;
+    /*margin-left:auto;
+    margin-right:auto;*/
+    margin-top:5px;
+    margin-bottom:0px;
 }
 .header-site h2{
     margin-top:0px;
@@ -46,6 +51,8 @@
  }
  .container {
       background-color:black;
+      background-image:url("~/Content/Assets/enp.jpg");
+      background-size:cover;
       width:100%;
  }
  q {

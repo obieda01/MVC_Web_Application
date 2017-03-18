@@ -8,12 +8,12 @@
     </head>
 <body>
     <div class="container">
-        <div class="header-site">
+        <div class="jumbotron row header-site">
             <div>
-                <img src="~/Content/logo.png" style="float:left;" />
+                <img src="~/Content/logo.png" />
                 @*<h2 style="text-align:center">National Park Weather Service</h2>*@
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="jumbotron row navbar-collapse collapse">
                  <ul class="nav navbar-nav" style="float:right;">
                      <li>@Html.ActionLink("National Parks", "ParkList", "Home")</li>
                      <li><a href="@Url.Action("Index", "Home")">See all Parks</a></li>
@@ -21,6 +21,7 @@
                  </ul>
             </div>
         </div>
+
         <div class="jumbotron">
             @RenderBody()
             <br />
@@ -32,6 +33,5 @@
                 </div>
             </footer>
         </div>
-        </>
 </body>
 </html>

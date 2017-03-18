@@ -5,7 +5,7 @@
 }
 @*a. The home page should only show a picture of the park, its name, location, and a short summary,*@
 
-<h1 style="text-align:center">National Park Weather Service</h1>
+<h1 style="text-align:center">National Park Weather Service</h1><br />
 @foreach (var park in Model)
 {
     <div class="row" style="vertical-align:top;border:2px solid blue;">
@@ -15,7 +15,7 @@
                 <img src="~/Content/Assets/@imagePath" alt="park image" />
             </a>
         </div>
-        <div class="col-sm-8">
+        <div class="col-sm-8" style="vertical-align:top;position:relative;">
             <h2> @park.ParkName </h2>
             <h3>@park.State</h3>
             <p>@park.ParkDescription</p>
