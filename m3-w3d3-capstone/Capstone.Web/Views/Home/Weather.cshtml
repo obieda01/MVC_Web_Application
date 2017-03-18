@@ -1,59 +1,119 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Weather";
 }
 @using Capstone.Web.Models;
 @model List<Weather>
-    <div>
-        <h2>5 Day Weather Forecaset</h2>
+<div>
+
     <table>
         <thead>
-            
+            <h2 style="font-weight:bold; text-align:center;">5 Day Weather Forecaset</h2>
         </thead>
         <tr>
-            <th>Day 1</th>
-            <th>Day 2</th>
-            <th>Day 3</th>
-            <th>Day 4</th>
-            <th>Day 5</th>
+            <td>
+                <div class="row">
+                    @using (Html.BeginForm("Weather", "Home", FormMethod.Get))
+                    {
+                        <label>
+                            <input type="radio" name="Tempature" value="F" checked="checked" /> Fahrenheit
+                        </label>
+                        <label>
+                            <input type="radio" name="Tempature" value="C" /> Celsius
+                        </label>
+                        <br />
+                        <input type="submit" name="" value="Change to F or C" class="btn btn-primary" />
+                        <br />
+                    }
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <th><h2>Day 1</h2></th>
+            <th><h2>Day 2</h2></th>
+            <th><h2>Day 3</h2></th>
+            <th><h2>Day 4</h2></th>
+            <th><h2>Day 5</h2></th>
         </tr>
         <tr>
             @foreach (Weather item in Model)
             {
-
-                <td>
-                    @if(item.Forecast == "cloudy")
+                <td style="width: 340px;">
+                    @if (item.Tempature == "F")
                     {
-                        <img src="~/Content/Assets/cloudy.png" />
+                        <span>High @item.High Degree (F) </span><br />
+                        <span> Low  @item.Low Degree (F) </span><br />
+                    }
+                    else
+                    {
+                        <span>High @item.High Degree (C) </span><br />
+                        <span> Low  @item.Low Degree (C) </span><br />
+                    }
+                    The forcast for today: <strong>@item.Forecast</strong><br />
+                    @if (item.Low <= -20)
+                    {
+                        <span>frigid temperatures - bundle up and be safe</span>
+                    }
+
+                    @if (item.Forecast == "cloudy")
+                    {
+                        <img src="~/Content/Assets/cloudy.png" class="td-img" />
                     }
                     else if (item.Forecast == "partly cloudy")
                     {
-                        <img src="~/Content/Assets/partlyCloudy.png" />
+                        <div>
+                            <img src="~/Content/Assets/partlyCloudy.png" class="td-img" />
+                        </div>
                     }
                     else if (item.Forecast == "sunny")
                     {
-                        <img src="~/Content/Assets/sunny.png" />
+                        <div>
+                            <img src="~/Content/Assets/sunny.png" class="td-img" />
+                        </div>
+                            <div>
+                                <p> Don't forget to pack sunblock and enjoy the beautiful weather</p>
+                            </div>
                     }
                     else if (item.Forecast == "snow")
                     {
-                        <img src="~/Content/Assets/snow.png" />
+                        <div>
+                            <img src="~/Content/Assets/snow.png" class="td-img" />
+                        </div>
+                            <div>
+                                <p>Pack snow shoes and dress in layers</p>
+                            </div>
                     }
                     else if (item.Forecast == "rain")
                     {
-                        <img src="~/Content/Assets/rain.png" />
+                        <div>
+                            <img src="~/Content/Assets/rain.png" class="td-img" />
+                        </div>
+                            <div>
+                                <p>Don't forget to pack rain gear and wear waterproof shoes</p>
+                            </div>
                     }
                     else if (item.Forecast == "thunderstorms")
                     {
-                        <img src="~/Content/Assets/thunderstorms.png" />
+                        <div>
+                            <img src="~/Content/Assets/thunderstorms.png" class="td-img" />
+                        </div>
+                            <div>
+                                <p>Please  seek shelter and avoid hiking on exposed ridges</p>
+                            </div>
                     }
-                    <br />
-                    High @item.High F <br />
-                    Low @item.Low F <br />
-                    @item.Forecast<br />
-                </td>
 
+
+                    @if (item.High > 75)
+                    {
+                        <span>Bring an extra gallon of water</span>
+                    }
+                    @if (item.High - item.Low == 20)
+                    {
+                        <span>Very humid - wear breathable layers</span>
+                    }
+                </td>
             }
         </tr>
     </table>
+
 </div>
 

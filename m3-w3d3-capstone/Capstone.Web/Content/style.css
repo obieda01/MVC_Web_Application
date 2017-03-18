@@ -1,7 +1,9 @@
-﻿img{
-    width:400px;
-    height: 350px;
-    margin-right:5px;
+﻿.row img{
+    width:95%;
+    height: 95%;
+    margin-top:5px;
+    margin-right:3px;
+    margin-bottom:10px;
     border-radius:5px;
 }
 
@@ -22,15 +24,20 @@
 
 }
  .jumbotron{
-     width:85%;
+     width:90%;
      margin-top:0px;
      margin-left: 80px;
-     margin-right:2px;
+     margin-right:5px;
      background-color:azure;
      /*color:#ff6a00;*/
      /*color:azure;*/
      color:#3366FF;
 
+ }
+
+ .jumbotron ul li {
+     list-style-type:none;
+     margin-left:0px;
  }
  .park-detail-img{
     width: 250px;
@@ -44,7 +51,7 @@
  q {
     quotes: "\00ab" "\00bb" "\2039" "\203A";
 }
- table td img {
-     width:150px;
-     height:110px;
+.td-img {
+     width:300px;
+     height:240px;
  }
