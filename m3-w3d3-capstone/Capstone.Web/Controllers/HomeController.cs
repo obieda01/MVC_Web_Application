@@ -111,9 +111,6 @@ namespace Capstone.Web.Controllers
             }
             return (int)newTemp;
         }
-<<<<<<< HEAD
 
-=======
->>>>>>> feature_11
     }
 }

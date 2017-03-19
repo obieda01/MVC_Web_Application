@@ -21,53 +21,6 @@
     string activateSurveyClass = String.Empty;
 }
 <body>
-<<<<<<< HEAD
-    <div class="container">
-        <div class="jumbotron">
-            <div class="row header-site">
-                <img src="~/Content/logo.png" />
-                @*<h2 style="text-align:center">National Park Weather Service</h2>*@
-            </div>
-            <div class="row header-site navbar-collapse collapse" style="background-color:brown;">
-                <ul class="nav navbar-nav" style="float:right;">
-                    <li>@Html.ActionLink("National Parks", "ParkList", "Home")</li>
-                    <li><a href="@Url.Action( "SurveyList", "Survey")">Survey</a></li>
-                </ul>
-            </div>
-        </div>
-
-    
-        <div class="ui inverted segment">
-            <div class="ui inverted secondary pointing menu">
-                @if (currenUrl == "/Home/ParkList") { activateParkClass = "active"; }
-                <a href="@Url.Action("ParkList", "Home")" class="item @activateParkClass">
-                    See all Parks
-                </a>
-                @if (currenUrl == "/Survey/SurveyList") { activateSurveyClass = "active"; }
-                <a class="item  @activateSurveyClass" href="@Url.Action( "SurveyList", "Survey")">Survey</a>
-                <a class="item" href="@Url.Action( "About", "About")">
-                    About
-                </a>
-            </div>
-        </div>
-
-        <div class="jumbotron">
-            @RenderBody()
-            <footer>
-                <p style="text-align:center; font-size: .6em;">&copy; 2017 - @DateTime.Now.Year - National Park Weather Service Application</p>
-                <div>
-                    @RenderSection("AfterCopyright", false)
-                </div>
-            </footer>
-        </div>
-   </div>
-
-    <script>
-        $('.ui.modal')
-           .modal('show');
-    </script>
-
-=======
     <div class="ui  container  segment " id="example1">
         <div class="ui sticky" style="width: 272.005px !important; height: 262.031px !important; left: 1194.74px;">
             <div class="ui inverted segment ">
@@ -108,6 +61,5 @@
                 context: '#example1'
             })
             ;</script>
->>>>>>> feature_11
 </body>
 </html>
