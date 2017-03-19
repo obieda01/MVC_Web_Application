@@ -3,35 +3,33 @@
 @{
     ViewBag.Title = "ParkList";
 }
-    @*a. The home page should only show a picture of the park, its name, location, and a short summary,*@
-<div class="column">
+@*a. The home page should only show a picture of the park, its name, location, and a short summary,*@
 
-
-    @foreach (var park in Model)
-    {
-        <div class="ui segment">
-            <img>
-            <div style="min-height:450px;">
-
+@foreach (var park in Model)
+{
+    <div class="ui stacked tertiary segment">
+        <div style="min-height:450px;">
+            <div class="ui black inverted segment">
                 <h2 style="text-align:center"> @park.ParkName </h2>
-
-                <div style="float:left;">
+            </div>
+            <div style="float:left;">
+                <div class="ui fluid image">
+                    <div class="ui grey ribbon label">
+                        <a href='@Url.Action("ParkDetails", "Home", new { id = park.ParkCode })'>See detail</a>
+                    </div>
                     @{string imagePath = park.ParkCode.ToLower() + ".jpg";}
-                    @*<img src="~/Content/Assets/@imagePath" alt="park image" style="float:left;" />*@
-
                     <a href='@Url.Action("ParkDetails", "Home", new { id = park.ParkCode })'>
                         <img src="~/Content/Assets/@imagePath" alt="parkimage" />
                     </a>
                     <h3 style="text-align:center;">@park.State</h3>
                 </div>
-
-                <div style="display:inline-block; width:450px;margin-left:30px;vertical-align:top;">
-                    <br />
-                    <p>@park.ParkDescription</p>
-                </div>
             </div>
-            <hr />
+            <div style="display:inline-block; width:450px;margin-left:30px;vertical-align:top;">
+                <br />
+                <p>@park.ParkDescription</p>
+            </div>
         </div>
+        <hr />
+    </div>
 
                         }
-</div>

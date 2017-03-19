@@ -277,6 +277,7 @@
     <Content Include="Content\themes\default\assets\images\flags.png" />
     <Content Include="Content\themes\github\assets\fonts\octicons.svg" />
     <Content Include="Content\themes\material\assets\fonts\icons.svg" />
+    <Content Include="geek.ico" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>

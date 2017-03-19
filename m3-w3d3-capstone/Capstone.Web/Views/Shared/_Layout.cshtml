@@ -3,10 +3,9 @@
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>Capstone - National Park Service</title>
-
     <!-- StyleSheets-->
-
     <link rel="stylesheet" type="text/css" href="~/Content/semantic.css">
+    <link rel="shortcut icon" type="image/x-icon" href="~/geek.ico" />
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="~/Content/semantic.min.js"></script>
     <script src="~/Content/semantic.js"></script>
@@ -17,35 +16,45 @@
     string activateSurveyClass = String.Empty;
 }
 <body>
-    <div>
-        <div class="ui inverted segment">
-            <div class="ui inverted secondary pointing menu">
-                @if (currenUrl == "/Home/ParkList") { activateParkClass = "active"; }
-                <a href="@Url.Action("ParkList", "Home")" class="item @activateParkClass">
-                    See all Parks
-                </a>
-                @if (currenUrl == "/Survey/SurveyList") { activateSurveyClass = "active"; }
-                <a class="item  @activateSurveyClass" href="@Url.Action( "SurveyList", "Survey")">Survey</a>
-                <a class="item" href="@Url.Action( "About", "About")">
-                    About
-                </a>
+    <div class="ui  container  segment " id="example1">
+        <div class="ui sticky" style="width: 272.005px !important; height: 262.031px !important; left: 1194.74px;">
+            <div class="ui inverted segment ">
+                <div class="ui inverted secondary pointing menu">
+                    @if (currenUrl == "/Home/ParkList") { activateParkClass = "active"; }
+                    <a href="@Url.Action("ParkList", "Home")" class="item @activateParkClass">
+                        See all Parks
+                    </a>
+                    @if (currenUrl == "/Survey/SurveyList") { activateSurveyClass = "active"; }
+                    <a class="item  @activateSurveyClass" href="@Url.Action( "SurveyList", "Survey")">Survey</a>
+                    <a class="item" href="@Url.Action( "About", "About")">
+                        About
+                    </a>
+                    <div class="ui mini centered images ">
+                        <h2 style="text-align:center">
+                            <img src="~/Content/logo.png" />National Park Weather Service
+                        </h2>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="ui  container  segment">
-            @RenderBody()
-            <footer>
-                <p style="text-align:center;">&copy; 2017 - @DateTime.Now.Year - National Park Weather Service Application</p>
-                <div>
-                    @RenderSection("AfterCopyright", false)
-                </div>
-            </footer>
-        </div>
+        @RenderBody()
+        <footer>
+            <p style="text-align:center;">&copy; 2017 - @DateTime.Now.Year - National Park Weather Service Application</p>
+            <div>
+                @RenderSection("AfterCopyright", false)
+            </div>
+        </footer>
     </div>
-
     <script>
         $('.ui.modal')
             .modal('show')
+            ;
+
+        $('.ui.sticky')
+            .sticky({
+                context: '#example1'
+            })
             ;</script>
 </body>
 </html>
