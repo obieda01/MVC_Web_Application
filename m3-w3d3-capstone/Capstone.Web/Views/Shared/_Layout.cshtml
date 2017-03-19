@@ -10,6 +10,9 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="~/Content/semantic.min.js"></script>
     <script src="~/Content/semantic.js"></script>
+    <!-- StyleSheets
+        -->
+
     <link rel="stylesheet" href="~/Content/Solar_Bootstrap.css" />
     <link rel="stylesheet" href="~/Content/style.css" />
 </head>
@@ -34,7 +37,7 @@
         </div>
 
     
-        @*<div class="ui inverted segment">
+        <div class="ui inverted segment">
             <div class="ui inverted secondary pointing menu">
                 @if (currenUrl == "/Home/ParkList") { activateParkClass = "active"; }
                 <a href="@Url.Action("ParkList", "Home")" class="item @activateParkClass">
@@ -46,7 +49,7 @@
                     About
                 </a>
             </div>
-        </div>*@
+        </div>
 
         <div class="jumbotron">
             @RenderBody()
