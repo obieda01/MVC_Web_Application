@@ -7,6 +7,7 @@
 
 @*2. As a user of the system, I need the ability select a park and view additional details
     about the selected park. All detail described in the Park Data Source needs to be displayed.*@
+<<<<<<< HEAD
 
 <div class="row">
     <div class="col-md-5">
@@ -36,3 +37,36 @@
 
 
 
+=======
+<div class="ui stacked tertiary segment">
+    <div class="row">
+        <div class="col-md-5">
+            @{string imagePath = Model.ParkCode.ToLower() + ".jpg";}
+            <img src="~/Content/Assets/@imagePath" alt="park image" />
+            <p><q>@Model.InspirationalQuote</q><span style="font-size:0.7em"> --@Model.InspirationalQuoteSource </span></p>
+        </div>
+        <div class="col-md-7" style="margin-left:0px;">
+            <h3>    </h3>
+            <h3>@Model.ParkName</h3>
+            <h4>@Model.State</h4>
+            <p>
+                Founded in @Model.YearFounded.ToString("N"), @Model.ParkName is located in the state of @Model.State and has
+                @Model.MilesOfTrail.ToString("N") miles of trails spread out in it's @Model.Acreage.ToString("N") acres of natural landscapes.<br />
+                The @Model.ParkName has typical @Model.Climate climate and an elevation of @Model.ElevationInFeet feet above sea level, and most importantly
+                @Model.NumberOfAnimalSpecies different species of animals have been spotted by previous visitors.<br />
+                This park attracts around @Model.AnnualVisitorCount.ToString("N") annual visitors. <br />
+                The entry fee is @Model.EntryFee.ToString("C") and this park has @Model.NumberOfCampsites.ToString("N") campsites.
+            </p>
+            <h4>
+                Please Check the
+                <a href='@Url.Action("Weather", "Home", new { id = Model.ParkCode })'>
+                    5 Day Weather Forecast
+                </a>
+            </h4>
+        </div>
+    </div>
+
+</div>
+
+
+>>>>>>> feature_11
