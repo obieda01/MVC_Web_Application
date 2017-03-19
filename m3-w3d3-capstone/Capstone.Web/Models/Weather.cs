@@ -9,16 +9,17 @@ namespace Capstone.Web.Models
         public string ParkCode { get; set; }
 
         //fiveDayForecastValue int not null,
-        public int FiveDayForecastValue { get; set; }
+        public double FiveDayForecastValue { get; set; }
 
         //   low int not null,
-        public int Low { get; set; }
+        public double Low { get; set; }
 
         //   high int not null
         public int High { get; set; }
 
         //   forecast varchar(100) not null,
         public string Forecast { get; set; }
+        public string Tempature { get; set; }
 
         private IWeatherDAL weatherDAL;
 

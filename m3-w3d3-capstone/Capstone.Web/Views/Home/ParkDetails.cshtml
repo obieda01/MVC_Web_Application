@@ -8,37 +8,33 @@
 @*2. As a user of the system, I need the ability select a park and view additional details
     about the selected park. All detail described in the Park Data Source needs to be displayed.*@
 <div class="ui stacked tertiary segment">
-
-    <div class=" row">
-        <h2>@Model.ParkName</h2>
-
-        <div class="col-md-6">
+    <div class="row">
+        <div class="col-md-5">
             @{string imagePath = Model.ParkCode.ToLower() + ".jpg";}
-            <img src="~/Content/Assets/@imagePath" alt="park image" /><br />
+            <img src="~/Content/Assets/@imagePath" alt="park image" />
+            <p><q>@Model.InspirationalQuote</q><span style="font-size:0.7em"> --@Model.InspirationalQuoteSource </span></p>
         </div>
-        <div class="col-md-6" style="margin-left:0px;">
+        <div class="col-md-7" style="margin-left:0px;">
+            <h3>    </h3>
+            <h3>@Model.ParkName</h3>
+            <h4>@Model.State</h4>
             <p>
-                <ul>
-                    <li>Founded on @Model.YearFounded.ToString("N") in @Model.State</li>
-                    <li>@Model.ElevationInFeet Feet above sea level</li>
-                    <li>@Model.Acreage.ToString("N") Total Acres</li>
-                    <li>@Model.NumberOfAnimalSpecies.ToString("N") Species</li>
-                    <li>@Model.AnnualVisitorCount.ToString("N") Annual Visitors</li>
-                    <li>@Model.EntryFee.ToString("C") Entry Fee</li>
-                </ul> <br />
+                Founded in @Model.YearFounded.ToString("N"), @Model.ParkName is located in the state of @Model.State and has
+                @Model.MilesOfTrail.ToString("N") miles of trails spread out in it's @Model.Acreage.ToString("N") acres of natural landscapes.<br />
+                The @Model.ParkName has typical @Model.Climate climate and an elevation of @Model.ElevationInFeet feet above sea level, and most importantly
+                @Model.NumberOfAnimalSpecies different species of animals have been spotted by previous visitors.<br />
+                This park attracts around @Model.AnnualVisitorCount.ToString("N") annual visitors. <br />
+                The entry fee is @Model.EntryFee.ToString("C") and this park has @Model.NumberOfCampsites.ToString("N") campsites.
             </p>
+            <h4>
+                Please Check the
+                <a href='@Url.Action("Weather", "Home", new { id = Model.ParkCode })'>
+                    5 Day Weather Forecast
+                </a>
+            </h4>
         </div>
-        <p><q>@Model.InspirationalQuote</q><span style="font-size:0.7em"> --@Model.InspirationalQuoteSource </span></p>
     </div>
 
-    @*As a user of the system, once I select a park for viewing I have a way of viewing its 5-day
-        weather forecast. Each daily forecast should provide a recommendation so that the
-        user knows how to prepare for the weather appropriately.*@
-    <div class="jumbotron">
-        <h3>
-            <a href='@Url.Action("Weather", "Home", new { id = Model.ParkCode })'>
-                5 Day Weather Forecast
-            </a>
-        </h3>
-    </div>
 </div>
+
+
