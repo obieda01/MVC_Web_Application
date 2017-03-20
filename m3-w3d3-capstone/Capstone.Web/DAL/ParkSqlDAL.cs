@@ -53,9 +53,9 @@ namespace Capstone.Web.DAL
                 }
                 return allParks;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
 

@@ -8,10 +8,11 @@
 @*As a user of the system, once I select a park for viewing I have a way of viewing its 5-day
     weather forecast. Each daily forecast should provide a recommendation so that the
     user knows how to prepare for the weather appropriately.*@
-<div class="ui stacked tertiary segment" style="background-color:azure;">
+<div class="ui stacked tertiary segment"style="background-color:azure;">
 
-    <h4 style="font-weight:bold; text-align:center;">5 Day Weather Forecaset</h4>
+    <h2 style="font-weight:bold; text-align:center;">5 Day Weather Forecaset</h2>
     <div class="card">
+
         @using (Html.BeginForm("Weather", "Home", FormMethod.Get))
         {
             <label>
@@ -53,68 +54,70 @@
                    @if(item.Low <= -20)
                     {
                         <div class="ui info message">
-                            <span>frigid temperatures - bundle up and be safe</span>
+                            <p>Frigid temperatures - bundle up and be safe</p>
                         </div>
                     }
-                   @if(item.High > 75)
-                    {
-                        <p>Bring an extra gallon of water</p>
+                   @if (item.High > 75)
+                   {
+                        <div class="ui info message">
+                            <p>Bring an extra gallon of water</p>
+                        </div>
                     }
-                   @if(item.High - item.Low == 20)
+                    @if (item.High - item.Low == 20)
                     {
-                       <p>Very humid - Wear breathable layers</p>
+                         <p>Very humid - Wear breathable layers</p>
                     }
-
-                    @if(item.Forecast == "cloudy")
-                    {
-                        <img src="~/Content/Assets/cloudy.png" class="td-img" />
-                    }
-                    else if (item.Forecast == "partly cloudy")
-                    {
+                    @if (item.Forecast == "cloudy")
+                     {
+                         <img src="~/Content/Assets/cloudy.png" class="td-img" />
+                     }
+                     else if (item.Forecast == "partly cloudy")
+                     {
                         <div>
                             <img src="~/Content/Assets/partlyCloudy.png" class="td-img" />
-                        </div>
-                    }
-                    else if (item.Forecast == "sunny")
-                    {
+                         </div>
+                     }
+                     else if (item.Forecast == "sunny")
+                     {
                         <div>
                             <img src="~/Content/Assets/sunny.png" class="td-img" />
                         </div>
                         <div class="ui info message">
-                            <p> Don't forget to pack sunblock and enjoy the beautiful weather</p>
+                             <p> Don't forget to pack sunblock and enjoy the beautiful weather</p>
                         </div>
-                    }
-                    else if (item.Forecast == "snow")
-                    {
+                     }
+                     else if (item.Forecast == "snow")
+                     {
                         <div>
                             <img src="~/Content/Assets/snow.png" class="td-img" />
                         </div>
+
                         <div>
-                            <p>Pack snow shoes / Dress in layers</p>
+                             <p>Pack snow shoes / Dress in layers</p>
                         </div>
-                    }
-                    else if (item.Forecast == "rain")
-                    {
-                        <div>
-                            <img src="~/Content/Assets/rain.png" class="td-img" />
-                        </div>
-                        <div class="ui info message">
-                             <p>Don't forget to pack rain gear and wear waterproof shoes</p>
-                        </div>
-                    }
-                    else if (item.Forecast == "thunderstorms")
-                    {
-                        <div class="ui info message">
-                            <img src="~/Content/Assets/thunderstorms.png" class="td-img" />
-                        </div>
-                        <div>
-                            <p>Please  seek shelter and avoid hiking on exposed ridges</p>
-                        </div>
-                    }     
-        </div>
-        }
+                     }
+                     else if (item.Forecast == "rain")
+                        {
+                            <div>
+                                <img src="~/Content/Assets/rain.png" class="td-img" />
+                            </div>
+
+                            <div class="ui info message">
+                                <p>Don't forget to pack rain gear and wear waterproof shoes</p>
+                            </div>
+                        }
+                        else if (item.Forecast == "thunderstorms")
+                        {
+                            <div>
+                                <img src="~/Content/Assets/thunderstorms.png" class="td-img" />
+                            </div>
+
+                            <div class="ui info message">
+                                <p>Please  seek shelter and avoid hiking on exposed ridges</p>
+                            </div>
+                        }
+                    </div>
+                   }
     </div>
 
 <hr />
-
- 
