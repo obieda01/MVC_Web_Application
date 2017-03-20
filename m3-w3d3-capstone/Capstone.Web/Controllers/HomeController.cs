@@ -7,12 +7,7 @@ namespace Capstone.Web.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: Home
-        public ActionResult Index()
-        {
-            return View("Index");
-        }
-
+        // GET: Home/Parklist
         public ActionResult ParkList()
         {
             Session["ParkList"] = "active";
@@ -62,7 +57,6 @@ namespace Capstone.Web.Controllers
                 else
                 {
                     isFaranheight = false;
-                    return View("Weather", weather);
                 }
             }
             else
@@ -96,7 +90,7 @@ namespace Capstone.Web.Controllers
             return View("Weather", weather);
         }
 
-        private int ChangeFaranheightToCelcius(double temp, string fTempOrCtemp)
+        public int ChangeFaranheightToCelcius(double temp, string fTempOrCtemp)
         {
             double newTemp = 0.00;
             if (fTempOrCtemp.ToLower() == "c")
@@ -107,10 +101,9 @@ namespace Capstone.Web.Controllers
             else if (fTempOrCtemp.ToLower() == "f")
             {
                 //°C x  9 / 5 + 32 = °F
-                newTemp = (temp * (9 / 5) + 32);
+                newTemp = (temp * (9 / 5.0) + 32);
             }
             return (int)newTemp;
         }
-
     }
 }

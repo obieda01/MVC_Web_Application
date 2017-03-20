@@ -5,25 +5,31 @@
 }
 
 @*a. The home page should only show a picture of the park, its name, location, and a short summary,*@
-<div>
-    <h1 style="text-align:center">National Park Weather Service</h1><br />
-    @foreach (var park in Model)
-    {
-        <div class="row" style="vertical-align:top;border:2px solid blue;">
-            <div class="col-sm-4">
-                @{string imagePath = park.ParkCode.ToLower() + ".jpg";}
-                <a href='@Url.Action("ParkDetails", "Home", new { id = park.ParkCode })'>
-                    <img src="~/Content/Assets/@imagePath" alt="park image" />
-                </a>
+
+@foreach (var park in Model)
+{
+    <div class="ui stacked tertiary segment">
+        <div style="min-height:450px;">
+            <div class="ui black inverted segment">
+                <h4 style="text-align:center"> @park.ParkName </h4>
             </div>
-            <div class="col-sm-8" style="vertical-align:top;position:relative;">
-                <h2> @park.ParkName </h2>
-                <h3>@park.State</h3>
+            <div style="float:left;">
+                <div class="ui fluid image">
+                    <div class="ui brown ribbon label">
+                        <a href='@Url.Action("ParkDetails", "Home", new { id = park.ParkCode })'>See detail</a>
+                    </div>
+                    @{string imagePath = park.ParkCode.ToLower() + ".jpg";}
+                    <a href='@Url.Action("ParkDetails", "Home", new { id = park.ParkCode })'>
+                        <img src="~/Content/Assets/@imagePath" alt="parkimage" />
+                    </a>
+                    <h3 style="text-align:center;">@park.State</h3>
+                </div>
+            </div>
+            <div style="display:inline-block; width:450px;margin-left:30px;vertical-align:top; color:black; font-size: 1.6em;">
+                <br />
                 <p>@park.ParkDescription</p>
             </div>
         </div>
-        <br />
-  }
-</div>
-
-
+        <hr />
+    </div>
+}

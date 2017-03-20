@@ -115,6 +115,7 @@
     <Content Include="Content\Assets\gsmnp.jpg" />
     <Content Include="Content\Assets\gtnp.jpg" />
     <Content Include="Content\Assets\mrnp.jpg" />
+    <Content Include="Content\Assets\Najma.jpg" />
     <Content Include="Content\Assets\partlyCloudy.png" />
     <Content Include="Content\Assets\rain.png" />
     <Content Include="Content\Assets\rmnp.jpg" />
@@ -277,6 +278,7 @@
     <Content Include="Content\themes\default\assets\images\flags.png" />
     <Content Include="Content\themes\github\assets\fonts\octicons.svg" />
     <Content Include="Content\themes\material\assets\fonts\icons.svg" />
+    <Content Include="geek.ico" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -306,7 +308,6 @@
     <Content Include="packages.config" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\ParkList.cshtml" />
     <Content Include="Views\Home\ParkDetails.cshtml" />
     <Content Include="Views\Home\Weather.cshtml" />

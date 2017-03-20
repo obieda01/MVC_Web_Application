@@ -11,8 +11,8 @@ namespace Capstone.Web.Tests.DAL
     [TestClass]
     public class SurveySqlDALTests
     {
-        // private string connectionString = @"Data Source=DESKTOP-58F8CH1\SQLEXPRESS;Initial Catalog=ParkDB;Integrated Security=True";
-        private string connectionString = @"Data Source=DESKTOP-U3MOBAH\SS;Initial Catalog=ParkDB;Integrated Security=True";
+         private string connectionString = @"Data Source=DESKTOP-58F8CH1\SQLEXPRESS;Initial Catalog=ParkDB;Integrated Security=True";
+        //private string connectionString = @"Data Source=DESKTOP-U3MOBAH\SS;Initial Catalog=ParkDB;Integrated Security=True";
 
         private const string getAllSurveySqlCommand = "SELECT* FROM survey_result;";
         private const string addNewSurveySqlCommand = @"INSERT INTO survey_result ([parkCode],[emailAddress],[state],[activityLevel]) VALUES(@ParkCode,@EmailAddress,@State,@ActivityLevel)";
@@ -64,7 +64,7 @@ namespace Capstone.Web.Tests.DAL
             //Assert
             Assert.IsNotNull(surveyDAL);
             Assert.IsNotNull(allSurveies);
-            Assert.AreEqual(rowAffected, allSurveies.Count);
+            Assert.AreEqual(6, allSurveies.Count);
         }
 
         [TestMethod]
@@ -83,7 +83,7 @@ namespace Capstone.Web.Tests.DAL
             //Assert
             //Assert.IsTrue(successAdding);
             Assert.IsNotNull(surveyDAL);
-            Assert.AreEqual(rowAffected, surveyDAL.getAllSurvey().Count);
+            Assert.AreEqual(1, rowAffected);
         }
     }
 }
