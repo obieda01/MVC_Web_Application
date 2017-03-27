@@ -15,6 +15,8 @@
 
 # Module 3 C# Capstone
 
+![Capstone](m3-w3d3-capstone/etc/1.gif)
+
 ## Overview
 
 Your Capstone should:
